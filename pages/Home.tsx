@@ -258,8 +258,9 @@ const Home = () => {
             <div className="flex flex-col md:flex-row gap-6 pt-4">
               <div className="flex-1 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 flex items-center justify-between">
                 <div>
-                  <h4 className="font-bold text-slate-900 dark:text-white">Produtos digitais</h4>
-                  <p className="text-xs text-slate-500">Cursos e E-books</p>
+                  <h4 className="font-bold text-slate-900 dark:text-white">Pagamentos com Cartão</h4>
+                  <p className="text-xs text-slate-500 mb-3">Aceite as principais bandeiras</p>
+                  <img src="/card-flags.png" alt="Bandeiras de cartão" className="h-6 object-contain" />
                 </div>
                 <div className="text-right">
                   <span className="text-2xl font-black text-slate-900 dark:text-white">5,99%</span>
