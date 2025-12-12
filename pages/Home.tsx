@@ -314,7 +314,7 @@ const Home = () => {
               {/* Mockup Grid */}
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  "/product-1.png",
+                  "/product-shoe.jpg",
                   "/product-2.jpg",
                   "/product-3.jpg",
                   "/product-4.jpg",
