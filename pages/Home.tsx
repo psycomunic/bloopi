@@ -266,13 +266,13 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="flex-1 p-6 rounded-2xl bg-yellow-50 dark:bg-yellow-900/10 border border-yellow-100 dark:border-yellow-900/30 flex items-start gap-4">
-                <div className="bg-white dark:bg-slate-800 p-2 rounded-lg shadow-sm">
-                  <Smartphone size={24} className="text-slate-900 dark:text-white" />
+              <div className="flex-1 p-8 rounded-3xl bg-[#FFFBEB] border border-yellow-100 flex items-start gap-6 shadow-sm">
+                <div className="bg-white p-3 rounded-xl shadow-sm border border-slate-100">
+                  <Smartphone size={28} className="text-slate-900" strokeWidth={2} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 dark:text-white mb-2">Saques Gratuitos</h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <h4 className="font-black text-xl text-slate-900 mb-2">Saques Gratuitos</h4>
+                  <p className="text-sm text-slate-600 leading-relaxed font-medium">
                     Na Bloopi, você tem liberdade total para movimentar o que é seu. Todos os saques são 100% gratuitos, sem taxas escondidas.
                   </p>
                 </div>
