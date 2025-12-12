@@ -266,13 +266,16 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="flex-1 p-8 rounded-3xl bg-[#FFFBEB] border border-yellow-100 flex items-start gap-6 shadow-sm">
-                <div className="bg-white p-3 rounded-xl shadow-sm border border-slate-100">
-                  <Smartphone size={28} className="text-slate-900" strokeWidth={2} />
+              <div className="flex-1 p-8 rounded-3xl bg-gradient-to-br from-emerald-400 to-green-600 shadow-[0_20px_40px_-15px_rgba(16,185,129,0.5)] transform hover:-translate-y-2 transition-all duration-300 flex items-start gap-6 relative overflow-hidden group">
+                <div className="absolute inset-0 bg-white/10 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute -right-10 -top-10 w-32 h-32 bg-white/20 rounded-full blur-2xl group-hover:bg-white/30 transition-all duration-500"></div>
+
+                <div className="bg-white/20 backdrop-blur-md p-3 rounded-xl shadow-inner border border-white/30 relative z-10">
+                  <Smartphone size={28} className="text-white" strokeWidth={2} />
                 </div>
-                <div>
-                  <h4 className="font-black text-xl text-slate-900 mb-2">Saques Gratuitos</h4>
-                  <p className="text-sm text-slate-600 leading-relaxed font-medium">
+                <div className="relative z-10">
+                  <h4 className="font-black text-xl text-white mb-2 drop-shadow-sm">Saques Gratuitos</h4>
+                  <p className="text-sm text-emerald-50 leading-relaxed font-medium">
                     Na Bloopi, você tem liberdade total para movimentar o que é seu. Todos os saques são 100% gratuitos, sem taxas escondidas.
                   </p>
                 </div>
