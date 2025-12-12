@@ -314,12 +314,12 @@ const Home = () => {
               {/* Mockup Grid */}
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=300&q=80",
-                  "https://images.unsplash.com/photo-1529139574466-a302c27e3844?auto=format&fit=crop&w=300&q=80",
-                  "https://images.unsplash.com/photo-1554412933-514a83d2f3c8?auto=format&fit=crop&w=300&q=80",
-                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=300&q=80",
-                  "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?auto=format&fit=crop&w=300&q=80",
-                  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+                  "/product-1.png",
+                  "/product-2.jpg",
+                  "/product-3.jpg",
+                  "/product-4.jpg",
+                  "/product-5.jpg",
+                  "/product-1.png"
                 ].map((src, i) => (
                   <div key={i} className="space-y-2">
                     <div className="aspect-[3/4] rounded-lg bg-slate-100 dark:bg-slate-700 overflow-hidden relative group">
