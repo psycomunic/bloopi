@@ -24,39 +24,108 @@ const Home = () => {
   return (
     <div className="w-full bg-background-light dark:bg-background-dark overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative bg-primary pt-32 pb-64 px-4 sm:px-6 lg:px-8 overflow-visible">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-white z-10"
-          >
-            <span className="text-sm font-bold tracking-widest uppercase opacity-80 mb-4 block">
-              A PLATAFORMA COMPLETA, JUNTE-SE A ESSE TIME E TENHA
-            </span>
-            <h1 className="text-4xl md:text-6xl font-black leading-tight mb-6">
-              Pagamentos com a maior conversão de vendas do mercado brasileiro
-            </h1>
-            <p className="text-lg opacity-90 leading-relaxed max-w-lg">
-              Apresentamos recursos completos e ferramentas exclusivas para impulsionar suas vendas!
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative z-0 lg:absolute lg:right-0 lg:bottom-0 lg:h-[110%] lg:w-1/2 flex items-end justify-center lg:justify-end pointer-events-none"
-          >
-            {/* Woman Image Placeholder - using a high quality Unsplash image that matches the vibe */}
-            <img
-              src="/hero-tech.jpg"
-              alt="Digital Payments Technology"
-              className="object-cover h-full max-h-[600px] lg:max-h-[800px] mask-image-gradient"
-              style={{ maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)' }}
+      <section className="relative pt-32 pb-48 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        {/* Animated Background Lines */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute w-full h-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+          {[...Array(5)].map((_, i) => (
+            <motion.div
+              key={i}
+              initial={{ x: -1000, opacity: 0 }}
+              animate={{ x: 2000, opacity: [0, 0.5, 0] }}
+              transition={{
+                duration: 10 + Math.random() * 10,
+                repeat: Infinity,
+                delay: i * 2,
+                ease: "linear",
+              }}
+              className="absolute h-[1px] w-1/2 bg-gradient-to-r from-transparent via-blue-400 to-transparent blur-sm"
+              style={{ top: `${20 + i * 15}%` }}
             />
-          </motion.div>
+          ))}
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+            {/* Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center lg:text-left pt-10"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-200 text-sm font-medium mb-6">
+                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                Nova geração de pagamentos
+              </div>
+
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 tracking-tight">
+                Pagamentos com a <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">maior conversão</span> do mercado
+              </h1>
+
+              <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                Aumente seu faturamento com nossa tecnologia de checkout transparente, antifraude integrado e as melhores taxas do mercado.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <button className="h-14 px-8 rounded-xl bg-green-500 hover:bg-green-400 text-slate-900 font-bold text-lg shadow-lg shadow-green-500/20 hover:scale-105 transition-all flex items-center justify-center gap-2">
+                  Criar conta grátis
+                  <ArrowRight size={20} />
+                </button>
+                <button className="h-14 px-8 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-lg backdrop-blur-md border border-white/10 transition-all">
+                  Falar com vendas
+                </button>
+              </div>
+
+              <div className="mt-10 flex items-center justify-center lg:justify-start gap-6 text-blue-200/60 text-sm">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 size={16} className="text-green-400" />
+                  <span>Setup gratuito</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 size={16} className="text-green-400" />
+                  <span>Sem mensalidade</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 size={16} className="text-green-400" />
+                  <span>Aprovação imediata</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Hero Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative lg:h-[800px] flex items-end justify-center lg:justify-end"
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10 h-40 bottom-0"></div>
+              <img
+                src="/hero-woman.png"
+                alt="Happy customer using laptop"
+                className="relative z-0 object-contain max-h-[600px] lg:max-h-[850px] drop-shadow-2xl"
+              />
+
+              {/* Floating Elements */}
+              <motion.div
+                animate={{ y: [0, -20, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-20 right-10 bg-white/10 backdrop-blur-xl p-4 rounded-2xl border border-white/20 shadow-2xl z-20 hidden md:block"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-slate-900">
+                    <TrendingUp size={24} />
+                  </div>
+                  <div>
+                    <div className="text-xs text-blue-200">Conversão</div>
+                    <div className="text-xl font-bold text-white">+32%</div>
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
