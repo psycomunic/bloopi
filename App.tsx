@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { HashRouter, Routes, Route, useLocation, Link, useNavigate } from 'react-router-dom';
-import { 
-  CreditCard, 
-  Menu, 
-  X, 
-  Moon, 
-  Sun, 
-  ChevronDown, 
-  Twitter, 
-  Linkedin, 
+import {
+  CreditCard,
+  Menu,
+  X,
+  Moon,
+  Sun,
+  ChevronDown,
+  Twitter,
+  Linkedin,
   Instagram,
   Globe
 } from 'lucide-react';
@@ -21,6 +21,7 @@ import Careers from './pages/Careers';
 import HelpCenter from './pages/HelpCenter';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
+import ChatWidget from './components/ChatWidget';
 
 // --- Shared Components ---
 
@@ -90,9 +91,9 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden absolute top-16 left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl p-4 flex flex-col gap-4 animate-in slide-in-from-top-2">
           {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
-              to={link.path} 
+            <Link
+              key={link.name}
+              to={link.path}
               onClick={() => setIsMenuOpen(false)}
               className="block py-2 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-primary"
             >
@@ -120,7 +121,7 @@ const Footer = () => {
         <div className="flex items-center gap-2">
           <img src="/logo.png" alt="Bloopi Logo" className="h-8 w-auto" />
         </div>
-        
+
         <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-500 dark:text-slate-400">
           <Link to="/terms" className="hover:text-primary transition-colors">Termos de Uso</Link>
           <Link to="/privacy" className="hover:text-primary transition-colors">Privacidade</Link>
@@ -150,6 +151,7 @@ const Layout = ({ children }: { children?: React.ReactNode }) => {
         {children}
       </main>
       <Footer />
+      <ChatWidget />
     </div>
   );
 };
