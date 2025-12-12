@@ -21,6 +21,7 @@ import Careers from './pages/Careers';
 import HelpCenter from './pages/HelpCenter';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
+import Contact from './pages/Contact';
 import ChatWidget from './components/ChatWidget';
 
 // --- Shared Components ---
@@ -177,6 +178,7 @@ const App = () => {
           <Route path="/help" element={<HelpCenter />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Layout>
     </HashRouter>
