@@ -56,10 +56,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate('/')}>
-            <div className="flex items-center justify-center size-8 rounded-lg bg-primary text-white shadow-lg shadow-blue-500/30">
-              <CreditCard size={20} />
-            </div>
-            <h2 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Bloopi</h2>
+            <img src="/logo.png" alt="Bloopi Logo" className="h-10 w-auto" />
           </div>
 
           <nav className="hidden md:flex gap-8 items-center">
@@ -121,8 +118,7 @@ const Footer = () => {
     <footer className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 py-10 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex items-center gap-2">
-          <CreditCard className="text-primary" size={24} />
-          <span className="font-bold text-slate-800 dark:text-white text-lg">Bloopi</span>
+          <img src="/logo.png" alt="Bloopi Logo" className="h-8 w-auto" />
         </div>
         
         <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-500 dark:text-slate-400">
