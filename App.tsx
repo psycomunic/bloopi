@@ -22,7 +22,13 @@ import HelpCenter from './pages/HelpCenter';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Contact from './pages/Contact';
+
+import Taxas from './pages/Taxas';
+import Resources from './pages/Resources';
+import Developers from './pages/Developers';
+import Testimonials from './pages/Testimonials';
 import ChatWidget from './components/ChatWidget';
+import Footer from './components/Footer';
 
 // --- Shared Components ---
 
@@ -115,34 +121,7 @@ const Header = () => {
   );
 };
 
-const Footer = () => {
-  return (
-    <footer className="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 py-10 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="Bloopi Logo" className="h-8 w-auto" />
-        </div>
 
-        <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-500 dark:text-slate-400">
-          <Link to="/terms" className="hover:text-primary transition-colors">Termos de Uso</Link>
-          <Link to="/privacy" className="hover:text-primary transition-colors">Privacidade</Link>
-          <Link to="/help" className="hover:text-primary transition-colors">Central de Ajuda</Link>
-          <Link to="/blog" className="hover:text-primary transition-colors">Blog</Link>
-        </div>
-
-        <div className="flex gap-6">
-          <a href="#" className="text-slate-400 hover:text-primary transition-colors"><Linkedin size={20} /></a>
-          <a href="#" className="text-slate-400 hover:text-primary transition-colors"><Twitter size={20} /></a>
-          <a href="#" className="text-slate-400 hover:text-primary transition-colors"><Instagram size={20} /></a>
-        </div>
-      </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400">
-        <p>© 2024 Bloopi Pagamentos S.A. Todos os direitos reservados.</p>
-        <p>Feito com 💙 em São Paulo</p>
-      </div>
-    </footer>
-  );
-};
 
 const Layout = ({ children }: { children?: React.ReactNode }) => {
   return (
@@ -179,6 +158,10 @@ const App = () => {
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/taxas" element={<Taxas />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/developers" element={<Developers />} />
+          <Route path="/testimonials" element={<Testimonials />} />
         </Routes>
       </Layout>
     </HashRouter>
