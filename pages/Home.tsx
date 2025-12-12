@@ -101,7 +101,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative lg:h-[800px] flex items-end justify-center lg:justify-end"
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10 h-40 bottom-0"></div>
+              <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent z-10 pointer-events-none"></div>
               <img
                 src="/hero-woman.png"
                 alt="Happy customer using laptop"
