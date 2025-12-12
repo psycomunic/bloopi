@@ -51,8 +51,8 @@ const Home = () => {
           >
             {/* Woman Image Placeholder - using a high quality Unsplash image that matches the vibe */}
             <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-              alt="Woman holding credit card"
+              src="/hero-tech.jpg"
+              alt="Digital Payments Technology"
               className="object-cover h-full max-h-[600px] lg:max-h-[800px] mask-image-gradient"
               style={{ maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)' }}
             />
