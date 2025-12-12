@@ -313,13 +313,20 @@ const Home = () => {
               </div>
               {/* Mockup Grid */}
               <div className="grid grid-cols-3 gap-4">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
+                {[
+                  "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=300&q=80",
+                  "https://images.unsplash.com/photo-1529139574466-a302c27e3844?auto=format&fit=crop&w=300&q=80",
+                  "https://images.unsplash.com/photo-1554412933-514a83d2f3c8?auto=format&fit=crop&w=300&q=80",
+                  "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=300&q=80",
+                  "https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?auto=format&fit=crop&w=300&q=80",
+                  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+                ].map((src, i) => (
                   <div key={i} className="space-y-2">
                     <div className="aspect-[3/4] rounded-lg bg-slate-100 dark:bg-slate-700 overflow-hidden relative group">
                       <img
-                        src={`https://images.unsplash.com/photo-${1500000000000 + i}?auto=format&fit=crop&w=200&q=80`}
-                        alt="Product"
-                        className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500"
+                        src={src}
+                        alt="Fashion Product"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>
                     <div className="h-2 w-16 bg-slate-100 dark:bg-slate-700 rounded mx-auto"></div>
