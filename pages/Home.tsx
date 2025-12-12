@@ -160,12 +160,8 @@ const Home = () => {
                   <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">
                     Aceite as principais bandeiras de cartão com 99% de aprovação para a maioria dos clientes.
                   </p>
-                  <div className="flex gap-2 opacity-70">
-                    {/* Mock Card Icons */}
-                    <div className="w-8 h-5 bg-blue-600 rounded"></div>
-                    <div className="w-8 h-5 bg-red-500 rounded"></div>
-                    <div className="w-8 h-5 bg-yellow-500 rounded"></div>
-                    <div className="w-8 h-5 bg-slate-400 rounded"></div>
+                  <div className="mt-2">
+                    <img src="/card-flags.png" alt="Bandeiras de cartão" className="h-8 object-contain" />
                   </div>
                 </div>
                 <div className="flex flex-col gap-4 min-w-[200px]">
