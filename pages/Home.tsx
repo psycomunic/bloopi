@@ -318,8 +318,8 @@ const Home = () => {
                   "/product-2.jpg",
                   "/product-3.jpg",
                   "/product-4.jpg",
-                  "/product-5.jpg",
-                  "/product-1.png"
+                  "/product-6.jpg",
+                  "/product-7.jpg"
                 ].map((src, i) => (
                   <div key={i} className="space-y-2">
                     <div className="aspect-[3/4] rounded-lg bg-slate-100 dark:bg-slate-700 overflow-hidden relative group">
