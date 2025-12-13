@@ -61,12 +61,17 @@ const Home = () => {
               </div>
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 tracking-tight">
-                Pagamentos com a <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">maior conversão</span> do mercado
+                Entregue seu produto digital de forma surpreendente!
               </h1>
 
-              <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Aumente seu faturamento com nossa tecnologia de checkout transparente, antifraude integrado e as melhores taxas do mercado.
-              </p>
+              <div className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 space-y-4">
+                <p>
+                  O Bloopi conecta você a tudo que precisa para vender online, do checkout ao pós-venda, com tecnologia robusta e segurança de ponta a ponta.
+                </p>
+                <p>
+                  Impulsione sua operação oferecendo uma experiência de pagamento eficaz, segura e intuitiva para seus clientes através de um ecossistema completo, que transforma seu infoproduto em vendas!
+                </p>
+              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button className="h-14 px-8 rounded-xl bg-green-500 hover:bg-green-400 text-slate-900 font-bold text-lg shadow-lg shadow-green-500/20 hover:scale-105 transition-all flex items-center justify-center gap-2">
@@ -74,24 +79,11 @@ const Home = () => {
                   <ArrowRight size={20} />
                 </button>
                 <button className="h-14 px-8 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-lg backdrop-blur-md border border-white/10 transition-all">
-                  Falar com vendas
+                  Conhecer
                 </button>
               </div>
 
-              <div className="mt-10 flex items-center justify-center lg:justify-start gap-6 text-blue-200/60 text-sm">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-green-400" />
-                  <span>Setup gratuito</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-green-400" />
-                  <span>Sem mensalidade</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 size={16} className="text-green-400" />
-                  <span>Aprovação imediata</span>
-                </div>
-              </div>
+
             </motion.div>
 
             {/* Hero Image */}
