@@ -136,7 +136,7 @@ const Home = () => {
                 Criar conta grátis
               </button>
               <button className="h-12 px-6 rounded-lg border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-bold hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
-                Fale com a equipe de vendas
+                Conhecer
               </button>
             </div>
           </div>
@@ -276,10 +276,10 @@ const Home = () => {
 
           </div>
         </div>
-      </section>
+      </section >
 
       {/* High Volume Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+      < section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900" >
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           {/* Left Column - Image Mockup */}
@@ -380,8 +380,8 @@ const Home = () => {
           </motion.div>
 
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
   );
 };
 
