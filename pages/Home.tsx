@@ -14,7 +14,10 @@ import {
   Barcode,
   FileText,
   Monitor,
-  RefreshCw
+  RefreshCw,
+  ScanSearch,
+  Link,
+  BarChart3
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -121,162 +124,64 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Pricing Overlay Card */}
-      <section className="relative z-20 -mt-48 px-4 sm:px-6 lg:px-8 pb-24">
-        <div className="max-w-5xl mx-auto bg-white dark:bg-slate-800 rounded-3xl shadow-2xl overflow-hidden border border-slate-100 dark:border-slate-700">
-
-          {/* Card Header */}
-          <div className="p-8 md:p-12 border-b border-slate-100 dark:border-slate-700 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div>
-              <h2 className="text-2xl font-bold text-slate-700 dark:text-slate-200">Quer aumentar suas vendas?</h2>
-              <p className="text-slate-500 dark:text-slate-400">Faça sua aplicação agora mesmo</p>
-            </div>
-            <div className="flex gap-4">
-              <button className="h-12 px-6 rounded-lg bg-slate-900 text-white font-bold hover:bg-slate-800 transition-colors">
-                Criar conta grátis
-              </button>
-              <button className="h-12 px-6 rounded-lg border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-bold hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
-                Conhecer
-              </button>
-            </div>
-          </div>
-
-          {/* Pricing Rows */}
-          <div className="p-8 md:p-12 space-y-8">
-
-            {/* Credit Card */}
-            <div className="p-6 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-primary/30 transition-colors">
-              <div className="flex flex-col md:flex-row justify-between gap-6">
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Pagamentos com Cartão</h3>
-                  <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">
-                    Aceite as principais bandeiras de cartão com 99% de aprovação para a maioria dos clientes.
-                  </p>
-                  <div className="mt-2">
-                    <img src="/card-flags.png" alt="Bandeiras de cartão" className="h-8 object-contain" />
-                  </div>
-                </div>
-                <div className="flex flex-col gap-4 min-w-[200px]">
-                  <div>
-                    <span className="text-xs text-slate-500 uppercase font-bold">A partir de</span>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-3xl font-black text-slate-900 dark:text-white">3,19%</span>
-                      <span className="text-sm font-bold text-slate-500">D+30</span>
-                    </div>
-                    <span className="text-xs text-slate-400">Recebimento em trinta dias</span>
-                  </div>
-                  <div>
-                    <span className="text-xs text-slate-500 uppercase font-bold">A partir de</span>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-3xl font-black text-slate-900 dark:text-white">3,49%</span>
-                      <span className="text-sm font-bold text-slate-500">D+2</span>
-                    </div>
-                    <span className="text-xs text-slate-400">Recebimento em dois dias</span>
-                  </div>
-                </div>
+      {/* Features Grid Section */}
+      <section className="relative z-20 -mt-32 px-4 sm:px-6 lg:px-8 pb-24">
+        <div className="max-w-7xl mx-auto bg-white dark:bg-slate-800 rounded-3xl shadow-2xl overflow-hidden border border-slate-100 dark:border-slate-700 p-8 md:p-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Feature 1: Checkout */}
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                <ShoppingCart size={24} />
               </div>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">
+                Converta mais com checkout otimizado e sem fricção
+              </h3>
+              <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                Taxa de conversão superior a 84% com fluxo direto. Processo simplificado para vendas avulsas e assinaturas recorrentes.
+              </p>
             </div>
 
-            {/* PIX */}
-            <div className="p-6 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-primary/30 transition-colors">
-              <div className="flex flex-col md:flex-row justify-between gap-6">
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Pagamentos com PIX</h3>
-                  <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">
-                    O PIX da Bloopi tem média de 86% de conversão de pagamento para nossos clientes.
-                  </p>
-                  <Zap className="text-primary" size={24} />
-                </div>
-                <div className="min-w-[200px]">
-                  <span className="text-xs text-slate-500 uppercase font-bold">A partir de</span>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-3xl font-black text-slate-900 dark:text-white">0,99%</span>
-                    <span className="text-sm font-bold text-slate-500">D+2</span>
-                  </div>
-                  <span className="text-xs text-slate-400">Recebimento em dois dias</span>
-                </div>
+            {/* Feature 2: Rastreamento */}
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400">
+                <ScanSearch size={24} />
               </div>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">
+                Identifique o que funciona e elimine o que não converte
+              </h3>
+              <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                Acompanhe leads, vendas e ROI em tempo real com rastreamento completo de campanhas e métricas detalhadas de performance.
+              </p>
             </div>
 
-            {/* Boleto */}
-            <div className="p-6 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-primary/30 transition-colors">
-              <div className="flex flex-col md:flex-row justify-between gap-6">
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Pagamento por Boleto</h3>
-                  <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">
-                    Com a Bloopi, você personaliza os campos do boleto para otimizar a conversão e reduzir o abandono.
-                  </p>
-                  <Barcode className="text-slate-400" size={24} />
-                </div>
-                <div className="min-w-[200px]">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-3xl font-black text-slate-900 dark:text-white">R$ 3,49</span>
-                    <span className="text-sm font-bold text-slate-500">D+2</span>
-                  </div>
-                  <span className="text-xs text-slate-400">Recebimento em dois dias</span>
-                </div>
+            {/* Feature 3: Integrações */}
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
+                <Link size={24} />
               </div>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">
+                Integre tudo sem complexidade técnica ou desenvolvedores
+              </h3>
+              <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                +150 integrações nativas automatizam seu funil completo. Da captura de leads ao pós-venda sem complexidade técnica, em apenas alguns cliques.
+              </p>
             </div>
 
-            {/* Features Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
-              <div className="p-4 rounded-xl border border-slate-100 dark:border-slate-700">
-                <h4 className="font-bold text-slate-900 dark:text-white mb-1">Checkout</h4>
-                <p className="text-xs text-slate-500">A partir de</p>
-                <p className="text-xl font-black text-slate-900 dark:text-white">1,40%</p>
+            {/* Feature 4: Métricas */}
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+                <BarChart3 size={24} />
               </div>
-              <div className="p-4 rounded-xl border border-slate-100 dark:border-slate-700">
-                <h4 className="font-bold text-slate-900 dark:text-white mb-1">Gateway</h4>
-                <p className="text-xs text-slate-500">A partir de</p>
-                <p className="text-xl font-black text-slate-900 dark:text-white">R$ 0,00</p>
-              </div>
-              <div className="p-4 rounded-xl border border-slate-100 dark:border-slate-700">
-                <h4 className="font-bold text-slate-900 dark:text-white mb-1">Antifraude</h4>
-                <p className="text-xs text-slate-500">A partir de</p>
-                <p className="text-xl font-black text-slate-900 dark:text-white">R$ 0,99</p>
-              </div>
-              <div className="p-4 rounded-xl border border-slate-100 dark:border-slate-700">
-                <h4 className="font-bold text-slate-900 dark:text-white mb-1">Assinatura</h4>
-                <p className="text-xs text-slate-500">A partir de</p>
-                <p className="text-xl font-black text-slate-900 dark:text-white">R$ 0,00</p>
-              </div>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">
+                Monitore performance com dados precisos em tempo real
+              </h3>
+              <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                Visão completa do negócio com métricas centralizadas em dashboard único. Vendas, assinaturas, clientes e campanhas.
+              </p>
             </div>
-
-            {/* Footer Row */}
-            <div className="flex flex-col md:flex-row gap-6 pt-4">
-              <div className="flex-1 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 flex items-center justify-between">
-                <div>
-                  <h4 className="font-bold text-slate-900 dark:text-white">Pagamentos com Cartão</h4>
-                  <p className="text-xs text-slate-500 mb-3">Aceite as principais bandeiras</p>
-                  <img src="/card-flags.png" alt="Bandeiras de cartão" className="h-6 object-contain" />
-                </div>
-                <div className="text-right">
-                  <span className="text-2xl font-black text-slate-900 dark:text-white">5,99%</span>
-                  <p className="text-[10px] text-slate-400 max-w-[150px] leading-tight mt-1">
-                    Possibilidade de receber cartão em 02 dias, R$ 2,49 por transação aprovada.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex-1 p-8 rounded-3xl bg-gradient-to-br from-emerald-400 to-green-600 shadow-[0_20px_40px_-15px_rgba(16,185,129,0.5)] transform hover:-translate-y-2 transition-all duration-300 flex items-start gap-6 relative overflow-hidden group">
-                <div className="absolute inset-0 bg-white/10 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute -right-10 -top-10 w-32 h-32 bg-white/20 rounded-full blur-2xl group-hover:bg-white/30 transition-all duration-500"></div>
-
-                <div className="bg-white/20 backdrop-blur-md p-3 rounded-xl shadow-inner border border-white/30 relative z-10">
-                  <Smartphone size={28} className="text-white" strokeWidth={2} />
-                </div>
-                <div className="relative z-10">
-                  <h4 className="font-black text-xl text-white mb-2 drop-shadow-sm">Saques Gratuitos</h4>
-                  <p className="text-sm text-emerald-50 leading-relaxed font-medium">
-                    Na Bloopi, você tem liberdade total para movimentar o que é seu. Todos os saques são 100% gratuitos, sem taxas escondidas.
-                  </p>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
-      </section >
+      </section>
 
       {/* High Volume Section */}
       < section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900" >
