@@ -385,7 +385,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             {/* Card 1: Order Bump */}
             <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-              <div className="h-48 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 rounded-2xl mb-8 flex items-center justify-center relative overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 rounded-2xl mb-8 flex items-center justify-center relative overflow-hidden">
                 {/* Mockup Placeholder */}
                 <div className="w-64 bg-white dark:bg-slate-800 rounded-xl shadow-lg p-4 border border-slate-100 dark:border-slate-700">
                   <div className="flex gap-3 mb-3">
@@ -411,7 +411,7 @@ const Home = () => {
 
             {/* Card 2: Upsell */}
             <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-              <div className="h-48 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 rounded-2xl mb-8 flex items-center justify-center relative overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 rounded-2xl mb-8 flex items-center justify-center relative overflow-hidden">
                 {/* Mockup Placeholder */}
                 <div className="text-center space-y-3">
                   <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto text-green-600">
