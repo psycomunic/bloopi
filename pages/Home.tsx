@@ -126,58 +126,66 @@ const Home = () => {
 
       {/* Features Grid Section */}
       <section className="relative z-20 -mt-32 px-4 sm:px-6 lg:px-8 pb-24">
-        <div className="max-w-7xl mx-auto bg-white dark:bg-slate-800 rounded-3xl shadow-2xl overflow-hidden border border-slate-100 dark:border-slate-700 p-8 md:p-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto bg-white dark:bg-slate-800 rounded-[2.5rem] shadow-xl border border-slate-100 dark:border-slate-700 p-8 md:p-12 lg:p-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Feature 1: Checkout */}
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400">
-                <ShoppingCart size={24} />
+            <div className="space-y-6">
+              <div className="w-14 h-14 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                <ShoppingCart size={28} strokeWidth={2} />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">
-                Converta mais com checkout otimizado e sem fricção
-              </h3>
-              <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                Taxa de conversão superior a 84% com fluxo direto. Processo simplificado para vendas avulsas e assinaturas recorrentes.
-              </p>
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">
+                  Converta mais com checkout otimizado e sem fricção
+                </h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                  Taxa de conversão superior a 84% com fluxo direto. Processo simplificado para vendas avulsas e assinaturas recorrentes.
+                </p>
+              </div>
             </div>
 
             {/* Feature 2: Rastreamento */}
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 dark:text-purple-400">
-                <ScanSearch size={24} />
+            <div className="space-y-6">
+              <div className="w-14 h-14 rounded-full bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center text-purple-600 dark:text-purple-400">
+                <ScanSearch size={28} strokeWidth={2} />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">
-                Identifique o que funciona e elimine o que não converte
-              </h3>
-              <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                Acompanhe leads, vendas e ROI em tempo real com rastreamento completo de campanhas e métricas detalhadas de performance.
-              </p>
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">
+                  Identifique o que funciona e elimine o que não converte
+                </h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                  Acompanhe leads, vendas e ROI em tempo real com rastreamento completo de campanhas e métricas detalhadas de performance.
+                </p>
+              </div>
             </div>
 
             {/* Feature 3: Integrações */}
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
-                <Link size={24} />
+            <div className="space-y-6">
+              <div className="w-14 h-14 rounded-full bg-indigo-50 dark:bg-indigo-900/20 flex items-center justify-center text-indigo-600 dark:text-indigo-400">
+                <Link size={28} strokeWidth={2} />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">
-                Integre tudo sem complexidade técnica ou desenvolvedores
-              </h3>
-              <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                +150 integrações nativas automatizam seu funil completo. Da captura de leads ao pós-venda sem complexidade técnica, em apenas alguns cliques.
-              </p>
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">
+                  Integre tudo sem complexidade técnica ou desenvolvedores
+                </h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                  +150 integrações nativas automatizam seu funil completo. Da captura de leads ao pós-venda sem complexidade técnica, em apenas alguns cliques.
+                </p>
+              </div>
             </div>
 
             {/* Feature 4: Métricas */}
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
-                <BarChart3 size={24} />
+            <div className="space-y-6">
+              <div className="w-14 h-14 rounded-full bg-emerald-50 dark:bg-emerald-900/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+                <BarChart3 size={28} strokeWidth={2} />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">
-                Monitore performance com dados precisos em tempo real
-              </h3>
-              <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-                Visão completa do negócio com métricas centralizadas em dashboard único. Vendas, assinaturas, clientes e campanhas.
-              </p>
+              <div className="space-y-3">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white leading-tight">
+                  Monitore performance com dados precisos em tempo real
+                </h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                  Visão completa do negócio com métricas centralizadas em dashboard único. Vendas, assinaturas, clientes e campanhas.
+                </p>
+              </div>
             </div>
           </div>
         </div>
