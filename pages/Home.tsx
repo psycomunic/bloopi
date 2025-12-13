@@ -366,7 +366,7 @@ const Home = () => {
       </section>
 
       {/* Intelligent Features Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -384,8 +384,8 @@ const Home = () => {
           {/* Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             {/* Card 1: Order Bump */}
-            <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 p-8 shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-48 bg-slate-50 dark:bg-slate-900/50 rounded-2xl mb-8 flex items-center justify-center relative overflow-hidden">
+            <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div className="h-48 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 rounded-2xl mb-8 flex items-center justify-center relative overflow-hidden">
                 {/* Mockup Placeholder */}
                 <div className="w-64 bg-white dark:bg-slate-800 rounded-xl shadow-lg p-4 border border-slate-100 dark:border-slate-700">
                   <div className="flex gap-3 mb-3">
@@ -410,8 +410,8 @@ const Home = () => {
             </div>
 
             {/* Card 2: Upsell */}
-            <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 p-8 shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-48 bg-slate-50 dark:bg-slate-900/50 rounded-2xl mb-8 flex items-center justify-center relative overflow-hidden">
+            <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div className="h-48 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 rounded-2xl mb-8 flex items-center justify-center relative overflow-hidden">
                 {/* Mockup Placeholder */}
                 <div className="text-center space-y-3">
                   <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto text-green-600">
@@ -434,7 +434,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {/* Card 3: Anti-Fraude */}
-            <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 p-8 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="h-40 bg-slate-50 dark:bg-slate-900/50 rounded-2xl mb-6 flex items-center justify-center">
                 <div className="relative">
                   <ShieldCheck size={48} className="text-slate-300 dark:text-slate-600" />
@@ -448,7 +448,7 @@ const Home = () => {
             </div>
 
             {/* Card 4: Tracking */}
-            <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 p-8 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="h-40 bg-slate-50 dark:bg-slate-900/50 rounded-2xl mb-6 flex items-center justify-center">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600"><Activity size={16} /></div>
@@ -465,7 +465,7 @@ const Home = () => {
             </div>
 
             {/* Card 5: Recovery */}
-            <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 p-8 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-white dark:bg-slate-800 rounded-3xl border border-slate-100 dark:border-slate-700 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="h-40 bg-slate-50 dark:bg-slate-900/50 rounded-2xl mb-6 flex items-center justify-center">
                 <div className="bg-white dark:bg-slate-800 p-3 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex items-center gap-3">
                   <div className="w-8 h-8 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center">
