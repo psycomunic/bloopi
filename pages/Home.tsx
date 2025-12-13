@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   ArrowRight,
@@ -23,6 +23,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState<'checkout' | 'dashboard'>('checkout');
+  const [activeTheme, setActiveTheme] = useState('brutus');
 
   return (
     <div className="w-full bg-background-light dark:bg-background-dark overflow-x-hidden">
@@ -186,6 +188,174 @@ const Home = () => {
                   Visão completa do negócio com métricas centralizadas em dashboard único. Vendas, assinaturas, clientes e campanhas.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Checkout Preview Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="inline-block py-2 px-4 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-bold uppercase tracking-wider mb-6">
+              CONHEÇA A BLOOPI
+            </span>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white leading-tight mb-6">
+              Com a Bloopi, o checkout não é o fim, é o começo do seu crescimento
+            </h2>
+            <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+              Transformamos seu checkout no maior diferencial da sua loja. Não somos apenas uma solução de pagamentos: aumentamos suas vendas, elevamos o ticket médio e tornamos sua operação mais profissional.
+            </p>
+          </div>
+
+          {/* Interactive Component */}
+          <div className="flex flex-col gap-8">
+            {/* Tabs */}
+            <div className="flex flex-col md:flex-row bg-white dark:bg-slate-800 p-2 rounded-2xl md:rounded-full border border-slate-200 dark:border-slate-700 w-full md:max-w-[520px] mx-auto shadow-sm">
+              <button
+                onClick={() => setActiveTab('checkout')}
+                className={`flex-1 flex items-center justify-center gap-2 px-6 py-3 rounded-xl md:rounded-full font-bold transition-all duration-300 ${activeTab === 'checkout'
+                    ? 'bg-green-500 text-slate-900 shadow-lg shadow-green-500/20'
+                    : 'text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700/50'
+                  }`}
+              >
+                <ShoppingCart size={20} />
+                Checkout Customizado
+              </button>
+              <button
+                onClick={() => setActiveTab('dashboard')}
+                className={`flex-1 flex items-center justify-center gap-2 px-6 py-3 rounded-xl md:rounded-full font-bold transition-all duration-300 ${activeTab === 'dashboard'
+                    ? 'bg-green-500 text-slate-900 shadow-lg shadow-green-500/20'
+                    : 'text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700/50'
+                  }`}
+              >
+                <BarChart3 size={20} />
+                Dashboard Inteligente
+              </button>
+            </div>
+
+            {/* Content Area */}
+            <div className="bg-white dark:bg-slate-800 rounded-[2.5rem] border border-slate-200 dark:border-slate-700 overflow-hidden shadow-2xl flex flex-col md:flex-row min-h-[600px]">
+              {activeTab === 'checkout' ? (
+                <>
+                  {/* Sidebar - Theme Selection */}
+                  <div className="w-full md:w-72 border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 p-6 flex flex-col">
+                    <p className="text-sm font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wider">
+                      Selecione um Checkout:
+                    </p>
+                    <div className="flex md:flex-col gap-4 overflow-x-auto md:overflow-visible pb-4 md:pb-0 scrollbar-hide">
+                      {[
+                        { id: 'brutus', name: 'Brutus', color: 'bg-slate-900' },
+                        { id: 'run', name: 'Run', color: 'bg-blue-600' },
+                        { id: 'pink', name: 'Pink', color: 'bg-pink-500' },
+                        { id: 'amaro', name: 'Amaro', color: 'bg-amber-700' },
+                        { id: 'flexis', name: 'Flexis', color: 'bg-emerald-600' }
+                      ].map((theme) => (
+                        <button
+                          key={theme.id}
+                          onClick={() => setActiveTheme(theme.id)}
+                          className={`relative group flex items-center gap-4 p-4 rounded-xl transition-all duration-300 text-left min-w-[160px] ${activeTheme === theme.id
+                              ? 'bg-white dark:bg-slate-700 shadow-md ring-2 ring-green-500 ring-offset-2 dark:ring-offset-slate-800'
+                              : 'hover:bg-white/50 dark:hover:bg-slate-700/50'
+                            }`}
+                        >
+                          <div className={`w-8 h-8 rounded-lg ${theme.color} flex items-center justify-center text-white font-bold text-xs`}>
+                            {theme.name[0]}
+                          </div>
+                          <span className={`font-bold ${activeTheme === theme.id ? 'text-slate-900 dark:text-white' : 'text-slate-500'}`}>
+                            {theme.name}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Preview Area */}
+                  <div className="flex-1 bg-slate-100 dark:bg-slate-900/50 p-8 md:p-12 flex items-center justify-center overflow-hidden relative">
+                    <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+
+                    {/* Mockup Container */}
+                    <div className="relative w-full max-w-md mx-auto bg-white dark:bg-slate-800 rounded-[2rem] shadow-2xl border-[8px] border-slate-900 overflow-hidden">
+                      {/* Mockup Header */}
+                      <div className="bg-slate-900 p-4 flex justify-between items-center">
+                        <div className="w-16 h-1 bg-slate-700 rounded-full"></div>
+                        <div className="w-2 h-2 rounded-full bg-slate-700"></div>
+                      </div>
+
+                      {/* Mockup Content - Simulating Checkout */}
+                      <div className="p-6 space-y-6 bg-white dark:bg-slate-800">
+                        {/* Theme Header */}
+                        <div className="flex justify-center mb-8">
+                          <div className={`h-8 w-32 rounded-lg ${activeTheme === 'brutus' ? 'bg-slate-900' :
+                              activeTheme === 'run' ? 'bg-blue-600' :
+                                activeTheme === 'pink' ? 'bg-pink-500' :
+                                  activeTheme === 'amaro' ? 'bg-amber-700' :
+                                    'bg-emerald-600'
+                            } opacity-90`}></div>
+                        </div>
+
+                        {/* Form Fields */}
+                        <div className="space-y-4">
+                          <div className="space-y-2">
+                            <div className="h-3 w-20 bg-slate-100 dark:bg-slate-700 rounded"></div>
+                            <div className="h-10 w-full bg-slate-50 dark:bg-slate-700/50 rounded-lg border border-slate-200 dark:border-slate-700"></div>
+                          </div>
+                          <div className="space-y-2">
+                            <div className="h-3 w-24 bg-slate-100 dark:bg-slate-700 rounded"></div>
+                            <div className="h-10 w-full bg-slate-50 dark:bg-slate-700/50 rounded-lg border border-slate-200 dark:border-slate-700"></div>
+                          </div>
+                          <div className="grid grid-cols-2 gap-4">
+                            <div className="h-10 w-full bg-slate-50 dark:bg-slate-700/50 rounded-lg border border-slate-200 dark:border-slate-700"></div>
+                            <div className="h-10 w-full bg-slate-50 dark:bg-slate-700/50 rounded-lg border border-slate-200 dark:border-slate-700"></div>
+                          </div>
+                        </div>
+
+                        {/* Pay Button */}
+                        <div className={`h-12 w-full rounded-xl mt-8 ${activeTheme === 'brutus' ? 'bg-slate-900' :
+                            activeTheme === 'run' ? 'bg-blue-600' :
+                              activeTheme === 'pink' ? 'bg-pink-500' :
+                                activeTheme === 'amaro' ? 'bg-amber-700' :
+                                  'bg-emerald-600'
+                          } flex items-center justify-center text-white font-bold shadow-lg`}>
+                          Pagar Agora
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                /* Dashboard Preview */
+                <div className="w-full h-full flex items-center justify-center p-8 md:p-12 bg-slate-50 dark:bg-slate-900/50">
+                  <div className="w-full max-w-4xl bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 p-6 space-y-6">
+                    <div className="flex justify-between items-center mb-8">
+                      <div className="h-8 w-48 bg-slate-100 dark:bg-slate-700 rounded-lg"></div>
+                      <div className="flex gap-2">
+                        <div className="h-8 w-8 bg-slate-100 dark:bg-slate-700 rounded-full"></div>
+                        <div className="h-8 w-8 bg-slate-100 dark:bg-slate-700 rounded-full"></div>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div className="h-32 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-100 dark:border-blue-800 p-4">
+                        <div className="h-8 w-8 rounded-full bg-blue-100 dark:bg-blue-800 mb-4"></div>
+                        <div className="h-4 w-24 bg-blue-200 dark:bg-blue-800/50 rounded mb-2"></div>
+                        <div className="h-8 w-32 bg-blue-200 dark:bg-blue-800/50 rounded"></div>
+                      </div>
+                      <div className="h-32 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-100 dark:border-green-800 p-4">
+                        <div className="h-8 w-8 rounded-full bg-green-100 dark:bg-green-800 mb-4"></div>
+                        <div className="h-4 w-24 bg-green-200 dark:bg-green-800/50 rounded mb-2"></div>
+                        <div className="h-8 w-32 bg-green-200 dark:bg-green-800/50 rounded"></div>
+                      </div>
+                      <div className="h-32 bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-100 dark:border-purple-800 p-4">
+                        <div className="h-8 w-8 rounded-full bg-purple-100 dark:bg-purple-800 mb-4"></div>
+                        <div className="h-4 w-24 bg-purple-200 dark:bg-purple-800/50 rounded mb-2"></div>
+                        <div className="h-8 w-32 bg-purple-200 dark:bg-purple-800/50 rounded"></div>
+                      </div>
+                    </div>
+                    <div className="h-64 bg-slate-50 dark:bg-slate-700/20 rounded-xl border border-slate-100 dark:border-slate-700"></div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
