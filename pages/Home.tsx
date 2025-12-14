@@ -198,12 +198,8 @@ const Home = () => {
         </div>
       </section>
 
-
-
-
-
       {/* Features Grid Section */}
-      <section className="relative z-20 -mt-10 px-4 sm:px-6 lg:px-8 pb-24">
+      <section className="relative z-20 -mt-32 px-4 sm:px-6 lg:px-8 pb-24">
         <div className="max-w-7xl mx-auto bg-white dark:bg-slate-800 rounded-[2.5rem] shadow-xl border border-slate-100 dark:border-slate-700 p-8 md:p-12 lg:p-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {/* Feature 1: Checkout */}
@@ -267,10 +263,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Checkout Preview Section */}
-      < section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50" >
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -661,10 +657,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
       {/* Intelligent Features Section */}
-      < section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800" >
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -788,39 +784,10 @@ const Home = () => {
             </button>
           </div>
         </div>
-      </section >
-
-      {/* Partners/Integrations Carousel Section */}
-      < section className="py-10 bg-slate-900 border-b border-slate-800 overflow-hidden relative" >
-        <div className="absolute inset-0 bg-blue-600/5 backdrop-blur-3xl"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-8 text-center">
-          <p className="text-sm font-bold text-blue-200 uppercase tracking-wider">
-            Integrado aos principais serviços de pagamentos do mercado
-          </p>
-        </div>
-
-        <div className="relative w-full overflow-hidden">
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-slate-900 to-transparent z-10"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-slate-900 to-transparent z-10"></div>
-
-          <div className="flex gap-12 animate-partners-scroll w-max items-center">
-            {/* Duplicating logos to create infinite scroll effect with just 2 images for now */}
-            {[...Array(15)].map((_, groupIndex) => (
-              <React.Fragment key={groupIndex}>
-                <div className="group relative flex items-center justify-center p-4 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-white/20 hover:shadow-lg hover:shadow-blue-500/10 backdrop-blur-sm transition-all duration-300 w-32 h-16 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 hover:scale-105 cursor-pointer">
-                  <img src="/partners/asaas.png" alt="Asaas" className="max-w-full max-h-full object-contain filter brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300" />
-                </div>
-                <div className="group relative flex items-center justify-center p-4 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-white/20 hover:shadow-lg hover:shadow-blue-500/10 backdrop-blur-sm transition-all duration-300 w-32 h-16 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 hover:scale-105 cursor-pointer">
-                  <img src="/partners/iugu.png" alt="Iugu" className="max-w-full max-h-full object-contain filter brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300" />
-                </div>
-              </React.Fragment>
-            ))}
-          </div>
-        </div>
-      </section >
+      </section>
 
       {/* Fast Payout Section */}
-      < section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900 overflow-hidden" >
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900 overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           {/* Left Column - Phone Mockup */}
@@ -998,10 +965,10 @@ const Home = () => {
           </motion.div>
 
         </div>
-      </section >
+      </section>
 
       {/* Testimonials Section */}
-      < section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900 overflow-hidden" >
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900 overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           {/* Left Column - Stats & CTA */}
@@ -1109,15 +1076,15 @@ const Home = () => {
           </motion.div>
 
         </div>
-      </section >
+      </section>
 
       {/* FAQ Section with Glassmorphism */}
-      < section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-slate-900" >
+      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-slate-900">
         {/* Background Gradients */}
-        < div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0" >
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
           <div className="absolute top-1/4 -left-64 w-96 h-96 bg-blue-600/30 rounded-full blur-[100px]"></div>
           <div className="absolute bottom-1/4 -right-64 w-96 h-96 bg-purple-600/30 rounded-full blur-[100px]"></div>
-        </div >
+        </div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 relative z-10">
 
@@ -1203,7 +1170,7 @@ const Home = () => {
           </div>
 
         </div>
-      </section >
+      </section>
     </div >
   );
 };
