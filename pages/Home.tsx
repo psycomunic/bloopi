@@ -21,7 +21,16 @@ import {
   Activity,
   Mail,
   CheckCircle,
-  Plus
+  Plus,
+  Users,
+  DollarSign,
+  MoreHorizontal,
+  ArrowUpRight,
+  Calendar,
+  Bell,
+  Search,
+  ChevronDown,
+  Wallet
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -329,34 +338,198 @@ const Home = () => {
                   </div>
                 </>
               ) : (
-                /* Dashboard Preview */
-                <div className="w-full h-full flex items-center justify-center p-8 md:p-12 bg-slate-50 dark:bg-slate-900/50">
-                  <div className="w-full max-w-4xl bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-700 p-6 space-y-6">
-                    <div className="flex justify-between items-center mb-8">
-                      <div className="h-8 w-48 bg-slate-100 dark:bg-slate-700 rounded-lg"></div>
-                      <div className="flex gap-2">
-                        <div className="h-8 w-8 bg-slate-100 dark:bg-slate-700 rounded-full"></div>
-                        <div className="h-8 w-8 bg-slate-100 dark:bg-slate-700 rounded-full"></div>
+                /* Dashboard Preview - High Fidelity */
+                <div className="w-full h-full flex items-center justify-center p-4 md:p-8 bg-slate-50 dark:bg-slate-900/50">
+                  <div className="w-full max-w-5xl bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden flex flex-col h-full max-h-[600px]">
+
+                    {/* Dashboard Header */}
+                    <div className="px-6 py-4 border-b border-slate-100 dark:border-slate-700 flex justify-between items-center bg-white dark:bg-slate-800 z-10">
+                      <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-blue-600/20">
+                          <span className="font-bold text-lg">B</span>
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-slate-900 dark:text-white text-sm">Visão Geral</h3>
+                          <p className="text-xs text-slate-500 dark:text-slate-400">Bem-vindo de volta, Angelo</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-3">
+                        <div className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-slate-50 dark:bg-slate-700/50 rounded-lg border border-slate-100 dark:border-slate-700">
+                          <Calendar size={14} className="text-slate-500" />
+                          <span className="text-xs font-medium text-slate-600 dark:text-slate-300">Últimos 30 dias</span>
+                          <ChevronDown size={14} className="text-slate-400" />
+                        </div>
+                        <div className="w-8 h-8 rounded-full bg-slate-50 dark:bg-slate-700/50 flex items-center justify-center border border-slate-100 dark:border-slate-700 relative">
+                          <Bell size={16} className="text-slate-500 dark:text-slate-400" />
+                          <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-800"></span>
+                        </div>
+                        <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 p-[2px]">
+                          <div className="w-full h-full rounded-full bg-white dark:bg-slate-800 p-[2px]">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User" className="w-full h-full rounded-full" />
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                      <div className="h-32 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-100 dark:border-blue-800 p-4">
-                        <div className="h-8 w-8 rounded-full bg-blue-100 dark:bg-blue-800 mb-4"></div>
-                        <div className="h-4 w-24 bg-blue-200 dark:bg-blue-800/50 rounded mb-2"></div>
-                        <div className="h-8 w-32 bg-blue-200 dark:bg-blue-800/50 rounded"></div>
+
+                    {/* Dashboard Content */}
+                    <div className="p-6 overflow-y-auto custom-scrollbar space-y-6 bg-slate-50/50 dark:bg-slate-900/20 flex-1">
+
+                      {/* Stats Grid */}
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        {/* Card 1 */}
+                        <div className="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm relative overflow-hidden group hover:shadow-md transition-all">
+                          <div className="absolute top-0 right-0 w-24 h-24 bg-green-500/5 rounded-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+                          <div className="flex justify-between items-start mb-4">
+                            <div className="p-2 bg-green-50 dark:bg-green-900/20 rounded-lg text-green-600 dark:text-green-400">
+                              <DollarSign size={20} />
+                            </div>
+                            <span className="flex items-center text-xs font-bold text-green-600 bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded-full">
+                              +15% <ArrowUpRight size={12} className="ml-1" />
+                            </span>
+                          </div>
+                          <div className="space-y-1">
+                            <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Faturamento Total</p>
+                            <h4 className="text-2xl font-black text-slate-900 dark:text-white">R$ 124.500</h4>
+                          </div>
+                        </div>
+
+                        {/* Card 2 */}
+                        <div className="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm relative overflow-hidden group hover:shadow-md transition-all">
+                          <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+                          <div className="flex justify-between items-start mb-4">
+                            <div className="p-2 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-blue-600 dark:text-blue-400">
+                              <ShoppingCart size={20} />
+                            </div>
+                            <span className="flex items-center text-xs font-bold text-blue-600 bg-blue-50 dark:bg-blue-900/20 px-2 py-1 rounded-full">
+                              +8% <ArrowUpRight size={12} className="ml-1" />
+                            </span>
+                          </div>
+                          <div className="space-y-1">
+                            <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Vendas Realizadas</p>
+                            <h4 className="text-2xl font-black text-slate-900 dark:text-white">1.432</h4>
+                          </div>
+                        </div>
+
+                        {/* Card 3 */}
+                        <div className="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm relative overflow-hidden group hover:shadow-md transition-all">
+                          <div className="absolute top-0 right-0 w-24 h-24 bg-purple-500/5 rounded-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+                          <div className="flex justify-between items-start mb-4">
+                            <div className="p-2 bg-purple-50 dark:bg-purple-900/20 rounded-lg text-purple-600 dark:text-purple-400">
+                              <Users size={20} />
+                            </div>
+                            <span className="flex items-center text-xs font-bold text-purple-600 bg-purple-50 dark:bg-purple-900/20 px-2 py-1 rounded-full">
+                              +12% <ArrowUpRight size={12} className="ml-1" />
+                            </span>
+                          </div>
+                          <div className="space-y-1">
+                            <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Clientes Ativos</p>
+                            <h4 className="text-2xl font-black text-slate-900 dark:text-white">854</h4>
+                          </div>
+                        </div>
                       </div>
-                      <div className="h-32 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-100 dark:border-green-800 p-4">
-                        <div className="h-8 w-8 rounded-full bg-green-100 dark:bg-green-800 mb-4"></div>
-                        <div className="h-4 w-24 bg-green-200 dark:bg-green-800/50 rounded mb-2"></div>
-                        <div className="h-8 w-32 bg-green-200 dark:bg-green-800/50 rounded"></div>
+
+                      {/* Main Chart Section */}
+                      <div className="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm">
+                        <div className="flex justify-between items-center mb-6">
+                          <div>
+                            <h4 className="font-bold text-slate-900 dark:text-white">Performance de Vendas</h4>
+                            <p className="text-xs text-slate-500 dark:text-slate-400">Comparativo com mês anterior</p>
+                          </div>
+                          <button className="p-2 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-lg transition-colors">
+                            <MoreHorizontal size={20} className="text-slate-400" />
+                          </button>
+                        </div>
+
+                        {/* CSS Chart Mockup */}
+                        <div className="relative h-48 w-full mt-4">
+                          {/* Grid Lines */}
+                          <div className="absolute inset-0 flex flex-col justify-between text-xs text-slate-400">
+                            <div className="border-b border-slate-100 dark:border-slate-700/50 w-full h-0"></div>
+                            <div className="border-b border-slate-100 dark:border-slate-700/50 w-full h-0"></div>
+                            <div className="border-b border-slate-100 dark:border-slate-700/50 w-full h-0"></div>
+                            <div className="border-b border-slate-100 dark:border-slate-700/50 w-full h-0"></div>
+                          </div>
+
+                          {/* Chart Path */}
+                          <svg className="absolute inset-0 w-full h-full overflow-visible" preserveAspectRatio="none">
+                            <defs>
+                              <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stopColor="#22c55e" stopOpacity="0.2" />
+                                <stop offset="100%" stopColor="#22c55e" stopOpacity="0" />
+                              </linearGradient>
+                            </defs>
+                            <path
+                              d="M0,150 C50,140 100,100 150,110 C200,120 250,60 300,70 C350,80 400,30 450,40 C500,50 550,10 600,20 L600,200 L0,200 Z"
+                              fill="url(#chartGradient)"
+                              className="text-green-500"
+                            />
+                            <path
+                              d="M0,150 C50,140 100,100 150,110 C200,120 250,60 300,70 C350,80 400,30 450,40 C500,50 550,10 600,20"
+                              fill="none"
+                              stroke="#22c55e"
+                              strokeWidth="3"
+                              strokeLinecap="round"
+                            />
+
+                            {/* Hover Point Mockup */}
+                            <circle cx="450" cy="40" r="6" fill="#22c55e" className="animate-pulse" />
+                            <circle cx="450" cy="40" r="12" fill="#22c55e" fillOpacity="0.2" />
+                          </svg>
+
+                          {/* Tooltip Mockup */}
+                          <div className="absolute top-0 left-[70%] transform -translate-x-1/2 -translate-y-full bg-slate-900 text-white text-xs py-1 px-3 rounded-lg shadow-xl mb-2">
+                            R$ 4.250,00
+                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-slate-900"></div>
+                          </div>
+                        </div>
+
+                        {/* X Axis */}
+                        <div className="flex justify-between mt-2 text-xs text-slate-400 font-medium">
+                          <span>Seg</span>
+                          <span>Ter</span>
+                          <span>Qua</span>
+                          <span>Qui</span>
+                          <span>Sex</span>
+                          <span>Sáb</span>
+                          <span>Dom</span>
+                        </div>
                       </div>
-                      <div className="h-32 bg-purple-50 dark:bg-purple-900/20 rounded-xl border border-purple-100 dark:border-purple-800 p-4">
-                        <div className="h-8 w-8 rounded-full bg-purple-100 dark:bg-purple-800 mb-4"></div>
-                        <div className="h-4 w-24 bg-purple-200 dark:bg-purple-800/50 rounded mb-2"></div>
-                        <div className="h-8 w-32 bg-purple-200 dark:bg-purple-800/50 rounded"></div>
+
+                      {/* Recent Transactions */}
+                      <div className="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm">
+                        <h4 className="font-bold text-slate-900 dark:text-white mb-4">Transações Recentes</h4>
+                        <div className="space-y-4">
+                          {[
+                            { name: 'Sofia Oliveira', status: 'Aprovado', value: 'R$ 197,00', time: '2 min atrás', img: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sofia' },
+                            { name: 'Pedro Santos', status: 'Pendente', value: 'R$ 497,00', time: '15 min atrás', img: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Pedro' },
+                            { name: 'Ana Costa', status: 'Aprovado', value: 'R$ 97,00', time: '32 min atrás', img: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Ana' }
+                          ].map((item, i) => (
+                            <div key={i} className="flex items-center justify-between p-3 hover:bg-slate-50 dark:hover:bg-slate-700/50 rounded-xl transition-colors cursor-pointer group">
+                              <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 overflow-hidden">
+                                  <img src={item.img} alt={item.name} className="w-full h-full" />
+                                </div>
+                                <div>
+                                  <p className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-blue-600 transition-colors">{item.name}</p>
+                                  <p className="text-xs text-slate-500 dark:text-slate-400">{item.time}</p>
+                                </div>
+                              </div>
+                              <div className="text-right">
+                                <p className="text-sm font-bold text-slate-900 dark:text-white">{item.value}</p>
+                                <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${item.status === 'Aprovado'
+                                    ? 'bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400'
+                                    : 'bg-yellow-100 text-yellow-600 dark:bg-yellow-900/30 dark:text-yellow-400'
+                                  }`}>
+                                  {item.status}
+                                </span>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
                       </div>
+
                     </div>
-                    <div className="h-64 bg-slate-50 dark:bg-slate-700/20 rounded-xl border border-slate-100 dark:border-slate-700"></div>
                   </div>
                 </div>
               )}
