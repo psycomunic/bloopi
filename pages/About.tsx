@@ -42,7 +42,7 @@ const About = () => {
           >
             <div className="absolute inset-0 bg-primary/10 mix-blend-overlay z-10"></div>
             <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA0DBHrqTlaytOnzMbI3-eGoc5NXDvyXeeUYlasY7-LWxQ_gY0A1n5mvY-_CVAwCWokw3XhAPsN-pg7TaqIuD0E8UoWLhUtQ4-QIVNXNm1hU3jevmrt0bvWHCnnRrfzFrNGgOhiWqeRw1h3piu1NIRJ_DDfheEFWEIW-KsYz-4Z7fwvLF1o3lTOxMHELFmh7X7buXLy3w-oSVFJs9GC4MZHjr_uH_8KIDAyPr-4hxvrUEzjJzsugDTi_TqbiJqT8wtpNMfbSbPAPSR"
+              src="/team_office.jpg"
               alt="Office team"
               className="w-full h-full object-cover transform scale-105 group-hover:scale-100 transition-transform duration-700"
             />
