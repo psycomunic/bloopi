@@ -830,6 +830,11 @@ const Home = () => {
                         />
                       </div>
                       <span className="font-bold text-white">Olá, Lucas</span>
+                      <img
+                        src="/fast-payout-icon.png"
+                        alt="Icon"
+                        className="h-5 w-auto object-contain ml-2"
+                      />
                     </div>
                     <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-white font-bold text-xs">L</div>
                   </div>
