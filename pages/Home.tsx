@@ -185,7 +185,7 @@ const Home = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-                className="absolute top-20 right-10 z-20 hidden md:block"
+                className="absolute top-[45%] right-10 md:right-20 z-20 hidden md:block"
               >
                 <img
                   src="/sales-notification-hero.png"
