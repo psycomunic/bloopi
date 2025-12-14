@@ -727,6 +727,179 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Fast Payout Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900 overflow-hidden">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          {/* Left Column - Phone Mockup */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative flex justify-center"
+          >
+            {/* Decorative Elements */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-yellow-100/50 dark:bg-yellow-900/10 rounded-full blur-3xl -z-10"></div>
+
+            {/* Phone Frame */}
+            <div className="relative w-[300px] h-[600px] bg-slate-900 rounded-[3rem] p-4 shadow-2xl border-4 border-slate-800">
+              {/* Screen Content */}
+              <div className="w-full h-full bg-yellow-400 rounded-[2.5rem] overflow-hidden relative flex flex-col">
+
+                {/* Status Bar Mockup */}
+                <div className="h-8 w-full flex justify-between items-center px-6 pt-2">
+                  <div className="text-[10px] font-bold text-slate-900">9:41</div>
+                  <div className="flex gap-1">
+                    <div className="w-3 h-3 bg-slate-900 rounded-full opacity-20"></div>
+                    <div className="w-3 h-3 bg-slate-900 rounded-full opacity-20"></div>
+                  </div>
+                </div>
+
+                {/* App Header */}
+                <div className="px-6 pt-4 pb-6">
+                  <div className="flex justify-between items-center mb-6">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-yellow-400 font-bold text-sm">B</div>
+                      <span className="font-bold text-slate-900">Olá, Lucas</span>
+                    </div>
+                    <div className="w-8 h-8 bg-white/30 rounded-full flex items-center justify-center text-slate-900 font-bold text-xs">L</div>
+                  </div>
+
+                  <div className="space-y-1 mb-6">
+                    <p className="text-xs font-medium text-slate-800 opacity-70">Saldo total em conta</p>
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-3xl font-black text-slate-900">R$ 10.342,00</h3>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-3">
+                    <div className="flex-1 bg-slate-900/10 rounded-xl p-3">
+                      <p className="text-[10px] font-bold text-slate-800 mb-1">Saldo a receber</p>
+                      <p className="text-sm font-bold text-slate-900">R$ 5.588,90</p>
+                    </div>
+                    <div className="flex-1 bg-slate-900 text-yellow-400 rounded-xl p-3 flex items-center justify-center font-bold text-sm shadow-lg shadow-slate-900/20">
+                      Solicitar saque
+                    </div>
+                  </div>
+                </div>
+
+                {/* Transactions List (White Card) */}
+                <div className="flex-1 bg-white rounded-t-[2.5rem] p-6 space-y-6">
+                  <h4 className="font-bold text-slate-900 text-sm">Últimas transações</h4>
+
+                  <div className="space-y-4">
+                    {[
+                      { val: 'R$ 24.400,50', status: 'Pendente', color: 'bg-yellow-100 text-yellow-700' },
+                      { val: 'R$ 35.000,00', status: 'Concluído', color: 'bg-green-100 text-green-700' },
+                      { val: 'R$ 800.520,89', status: 'Concluído', color: 'bg-green-100 text-green-700' },
+                      { val: 'R$ 15.080,00', status: 'Concluído', color: 'bg-green-100 text-green-700' },
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 font-bold text-xs">$</div>
+                          <div className="space-y-1">
+                            <div className="h-2 w-16 bg-slate-100 rounded"></div>
+                            <div className="h-2 w-10 bg-slate-100 rounded"></div>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <div className={`text-[8px] font-bold px-1.5 py-0.5 rounded-full inline-block mb-1 ${item.color}`}>{item.status}</div>
+                          <p className="text-xs font-bold text-slate-900">{item.val}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Floating Notification */}
+                <motion.div
+                  initial={{ x: 50, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.5 }}
+                  className="absolute top-1/2 -right-12 bg-white p-4 rounded-xl shadow-xl border border-slate-100 z-20 w-40"
+                >
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-600 mb-2">
+                    <DollarSign size={16} />
+                  </div>
+                  <p className="text-xs font-bold text-slate-900">Saque efetuado</p>
+                  <p className="text-[10px] text-green-600 font-bold mb-1">Concluído</p>
+                  <p className="text-sm font-black text-slate-900">R$ 35.000,00</p>
+
+                  {/* Dotted Line Connector */}
+                  <div className="absolute top-1/2 -left-12 w-12 border-t-2 border-dashed border-yellow-400"></div>
+                  <div className="absolute top-1/2 -left-1 w-2 h-2 bg-yellow-400 rounded-full -mt-1"></div>
+                </motion.div>
+
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right Column - Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="inline-block py-2 px-4 rounded-full bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 text-xs font-bold uppercase tracking-wider mb-6">
+              Bloopi Pay
+            </span>
+
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white leading-tight mb-6">
+              Receba seu dinheiro em até 2 dias úteis
+            </h2>
+
+            <p className="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed">
+              Chega de esperar prazos longos ou burocracias. Tenha previsibilidade financeira, melhor fluxo de caixa e crescimento acelerado com saques rápidos, sem custo e descomplicados.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
+              {/* Feature 1 */}
+              <div className="space-y-3">
+                <div className="w-10 h-10 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-700 dark:text-yellow-400">
+                  <DollarSign size={20} />
+                </div>
+                <h4 className="font-bold text-slate-900 dark:text-white">Saque gratuito, ágil e eficiente</h4>
+                <p className="text-sm text-slate-500 dark:text-slate-400">Saques realizados com agilidade em até <span className="font-bold text-slate-900 dark:text-white">2 dias úteis</span> sem taxas ocultas.</p>
+              </div>
+
+              {/* Feature 2 */}
+              <div className="space-y-3">
+                <div className="w-10 h-10 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-700 dark:text-yellow-400">
+                  <ShieldCheck size={20} />
+                </div>
+                <h4 className="font-bold text-slate-900 dark:text-white">Segurança total na Bloopi Pay</h4>
+                <p className="text-sm text-slate-500 dark:text-slate-400">Criptografia de ponta avançada e proteção total dos seus dados.</p>
+              </div>
+
+              {/* Feature 3 */}
+              <div className="space-y-3">
+                <div className="w-10 h-10 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-700 dark:text-yellow-400">
+                  <Wallet size={20} />
+                </div>
+                <h4 className="font-bold text-slate-900 dark:text-white">Controle total do seu dinheiro</h4>
+                <p className="text-sm text-slate-500 dark:text-slate-400">Elimine a burocracia e os prazos longos para acessar o que é seu.</p>
+              </div>
+
+              {/* Feature 4 */}
+              <div className="space-y-3">
+                <div className="w-10 h-10 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-700 dark:text-yellow-400">
+                  <Users size={20} />
+                </div>
+                <h4 className="font-bold text-slate-900 dark:text-white">Gerente de contas exclusivo</h4>
+                <p className="text-sm text-slate-500 dark:text-slate-400">Conte com um gerente exclusivo só seu, disponível em hora comercial.</p>
+              </div>
+            </div>
+
+            <button className="bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold py-4 px-8 rounded-xl hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+              Fale com a equipe de vendas
+            </button>
+          </motion.div>
+
+        </div>
+      </section>
+
       {/* High Volume Section */}
       < section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900" >
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
