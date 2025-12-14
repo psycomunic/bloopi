@@ -822,19 +822,14 @@ const Home = () => {
                 <div className="px-6 pt-4 pb-6">
                   <div className="flex justify-between items-center mb-6">
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center shadow-sm">
+                      <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center shadow-sm overflow-hidden">
                         <img
-                          src="/bloopi-logo-blue.png"
+                          src="/fast-payout-icon.png"
                           alt="Bloopi Logo"
-                          className="w-5 h-5 object-contain"
+                          className="w-full h-full object-cover"
                         />
                       </div>
                       <span className="font-bold text-white">Olá, Lucas</span>
-                      <img
-                        src="/fast-payout-icon.png"
-                        alt="Icon"
-                        className="h-5 w-auto object-contain ml-2"
-                      />
                     </div>
                     <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-white font-bold text-xs">L</div>
                   </div>
