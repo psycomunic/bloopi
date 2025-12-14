@@ -324,7 +324,7 @@ const Home = () => {
             className="flex gap-12 items-center"
             animate={{ x: ["0%", "-50%"] }}
             transition={{
-              duration: 20,
+              duration: 40,
               ease: "linear",
               repeat: Infinity
             }}
@@ -337,6 +337,11 @@ const Home = () => {
                   { name: 'Safe2Pay', src: '/partners/safe2pay.png' },
                   { name: 'Barte', src: '/partners/barte.png' },
                   { name: 'Revere', src: '/partners/revere.png' },
+                  { name: 'Stripe', src: '/partners/stripe.png' },
+                  { name: 'Pagar.me', src: '/partners/pagarme.png' },
+                  { name: 'Revolut', src: '/partners/revolut.png' },
+                  { name: 'SIBS', src: '/partners/sibs.png' },
+                  { name: 'Koin', src: '/partners/koin.png' },
                 ].map((partner, index) => (
                   <div
                     key={`${i}-${index}`}
