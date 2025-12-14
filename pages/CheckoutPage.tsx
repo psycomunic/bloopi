@@ -28,13 +28,14 @@ const CheckoutPage = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <span className="inline-block py-2 px-4 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-bold uppercase tracking-wider mb-6 border border-green-200 dark:border-green-800">
+                        <span className="inline-block py-2 px-4 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-bold uppercase tracking-wider mb-6 border border-green-200 dark:border-green-800 flex items-center gap-2 w-fit mx-auto">
+                            <img src="/logo.png" alt="Bloopi" className="h-4" />
                             NOVO CHECKOUT 3.1
                         </span>
                         <h1 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white mb-8 leading-tight">
-                            A experiência de compra <br />
+                            Checkout Bloopi: <br />
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-emerald-600">
-                                mais rápida do mundo.
+                                O mais rápido do mundo.
                             </span>
                         </h1>
                         <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed">
@@ -96,6 +97,7 @@ const CheckoutPage = () => {
                                 <ul className="space-y-4">
                                     {[
                                         'Identificação automática do cliente',
+                                        'Checkout com a garantia Bloopi',
                                         'Google Pay e Apple Pay nativos',
                                         'Recuperação de carrinho integrada',
                                         'Layout mobile-first'
@@ -116,7 +118,9 @@ const CheckoutPage = () => {
                                 <div className="bg-white rounded-[2.5rem] overflow-hidden shadow-2xl relative">
                                     {/* Mock Header */}
                                     <div className="h-16 bg-slate-50 border-b border-slate-100 flex items-center justify-between px-6">
-                                        <div className="w-8 h-8 rounded-lg bg-slate-900"></div>
+                                        <div className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center">
+                                            <span className="text-white font-bold text-xs">B</span>
+                                        </div>
                                         <div className="flex gap-1">
                                             <div className="w-2 h-2 rounded-full bg-slate-300"></div>
                                             <div className="w-2 h-2 rounded-full bg-green-500"></div>
