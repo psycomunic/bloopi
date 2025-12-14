@@ -252,77 +252,70 @@ const Home = () => {
             <div className="bg-white dark:bg-slate-800 rounded-[2.5rem] border border-slate-200 dark:border-slate-700 overflow-hidden shadow-2xl flex flex-col md:flex-row min-h-[600px]">
               {activeTab === 'checkout' ? (
                 <>
-                  {/* Sidebar - Theme Selection */}
-                  <div className="w-full md:w-72 border-b md:border-b-0 md:border-r border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 p-6 flex flex-col">
-                    <p className="text-sm font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-wider">
-                      Selecione um Checkout:
-                    </p>
-                    <div className="flex md:flex-col gap-4 overflow-x-auto md:overflow-visible pb-4 md:pb-0 scrollbar-hide">
-                      {[
-                        { id: 'brutus', name: 'Brutus', color: 'bg-slate-900' },
-                        { id: 'run', name: 'Run', color: 'bg-blue-600' },
-                        { id: 'pink', name: 'Pink', color: 'bg-pink-500' },
-                        { id: 'amaro', name: 'Amaro', color: 'bg-amber-700' },
-                        { id: 'flexis', name: 'Flexis', color: 'bg-emerald-600' }
-                      ].map((theme) => (
-                        <button
-                          key={theme.id}
-                          onClick={() => setActiveTheme(theme.id)}
-                          className={`relative group flex items-center gap-4 p-4 rounded-xl transition-all duration-300 text-left min-w-[160px] ${activeTheme === theme.id
-                            ? 'bg-white dark:bg-slate-700 shadow-md ring-2 ring-green-500 ring-offset-2 dark:ring-offset-slate-800'
-                            : 'hover:bg-white/50 dark:hover:bg-slate-700/50'
-                            }`}
-                        >
-                          <div className={`w-8 h-8 rounded-lg ${theme.color} flex items-center justify-center text-white font-bold text-xs`}>
-                            {theme.name[0]}
-                          </div>
-                          <span className={`font-bold ${activeTheme === theme.id ? 'text-slate-900 dark:text-white' : 'text-slate-500'}`}>
-                            {theme.name}
-                          </span>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Preview Area */}
-                  <div className="flex-1 bg-slate-100 dark:bg-slate-900/50 p-4 md:p-8 flex items-center justify-center overflow-hidden relative">
+                  <div className="flex-1 bg-slate-100 dark:bg-slate-900/50 p-4 md:p-8 flex items-center justify-center overflow-hidden relative min-h-[700px]">
                     <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
 
-                    {/* Mockup Container */}
-                    <div className="relative w-full max-w-md mx-auto bg-white dark:bg-slate-800 rounded-[2rem] shadow-2xl border-[8px] border-slate-900 overflow-hidden">
-                      {/* Mockup Header */}
-                      <div className="bg-slate-900 p-4 flex justify-between items-center">
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-red-500"></div>
-                          <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
-                          <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                    {/* Mockup Container - Standalone & Centered */}
+                    <div className="relative w-full max-w-4xl mx-auto bg-white dark:bg-slate-800 rounded-[2rem] shadow-2xl border-[8px] border-slate-900 overflow-hidden flex flex-col md:flex-row">
+
+                      {/* Left Column - Product & Trust */}
+                      <div className="w-full md:w-1/3 bg-slate-50 dark:bg-slate-900/50 p-6 border-b md:border-b-0 md:border-r border-slate-100 dark:border-slate-700 flex flex-col">
+
+                        {/* Header Mockup */}
+                        <div className="flex items-center gap-2 mb-8">
+                          <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center text-slate-900 font-bold">B</div>
+                          <span className="font-bold text-slate-900 dark:text-white text-sm">Bloopi Pay</span>
                         </div>
-                        <div className="flex items-center gap-1 text-slate-400 text-[10px] font-medium bg-slate-800 px-3 py-1 rounded-full">
-                          <Lock size={10} />
-                          checkout.bloopi.com.br
+
+                        {/* Product Info */}
+                        <div className="mb-8">
+                          <div className="aspect-video rounded-xl bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 mb-4 flex items-center justify-center text-4xl shadow-inner">
+                            🚀
+                          </div>
+                          <h4 className="font-bold text-slate-900 dark:text-white mb-1">Método Bloopi Pro</h4>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 mb-3">Acesso Vitalício + Comunidade</p>
+                          <div className="flex items-center justify-between">
+                            <span className="font-black text-xl text-slate-900 dark:text-white">R$ 97,00</span>
+                            <span className="text-xs font-bold bg-green-100 text-green-600 px-2 py-1 rounded-full">-50% OFF</span>
+                          </div>
+                        </div>
+
+                        {/* Guarantee Badge */}
+                        <div className="mt-auto bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-full bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-600">
+                            <ShieldCheck size={20} />
+                          </div>
+                          <div>
+                            <p className="text-xs font-bold text-slate-900 dark:text-white">Garantia de 7 Dias</p>
+                            <p className="text-[10px] text-slate-500 dark:text-slate-400">Risco zero para você</p>
+                          </div>
+                        </div>
+
+                        {/* Testimonial */}
+                        <div className="mt-4 flex gap-3 items-start">
+                          <div className="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden shrink-0">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Jessica" alt="User" />
+                          </div>
+                          <div className="bg-white dark:bg-slate-800 p-3 rounded-tr-xl rounded-br-xl rounded-bl-xl border border-slate-100 dark:border-slate-700 shadow-sm">
+                            <p className="text-[10px] text-slate-600 dark:text-slate-300 italic">"O checkout mais rápido que já vi. Minhas vendas aumentaram 30% na primeira semana!"</p>
+                            <p className="text-[10px] font-bold text-slate-900 dark:text-white mt-1">- Jéssica M.</p>
+                          </div>
                         </div>
                       </div>
 
-                      {/* Mockup Content - High Conversion Checkout */}
-                      <div className="p-6 bg-white dark:bg-slate-800 relative">
-
-                        {/* Product Summary */}
-                        <div className="flex gap-4 mb-6 pb-6 border-b border-slate-100 dark:border-slate-700">
-                          <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-600 flex items-center justify-center text-2xl">
-                            📚
-                          </div>
-                          <div className="flex-1">
-                            <h4 className="font-bold text-slate-900 dark:text-white text-sm">Método Bloopi Pro</h4>
-                            <p className="text-xs text-slate-500 dark:text-slate-400 mb-1">Acesso Vitalício + Bônus</p>
-                            <div className="flex items-center gap-2">
-                              <span className="font-black text-slate-900 dark:text-white">R$ 97,00</span>
-                              <span className="text-xs text-slate-400 line-through">R$ 197,00</span>
-                            </div>
+                      {/* Right Column - Checkout Form */}
+                      <div className="flex-1 p-6 md:p-8 bg-white dark:bg-slate-800 relative">
+                        {/* Secure Header */}
+                        <div className="flex justify-between items-center mb-6">
+                          <h3 className="font-bold text-slate-900 dark:text-white">Finalizar Pagamento</h3>
+                          <div className="flex items-center gap-1 text-green-600 bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded-full text-[10px] font-bold">
+                            <Lock size={10} />
+                            Ambiente Seguro
                           </div>
                         </div>
 
                         {/* Form Fields */}
-                        <div className="space-y-4">
+                        <div className="space-y-4 mb-6">
                           <div className="space-y-1.5">
                             <label className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Dados Pessoais</label>
                             <div className="relative">
@@ -330,62 +323,75 @@ const Home = () => {
                               <div className="w-full h-10 pl-9 pr-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-sm flex items-center text-slate-600 dark:text-slate-300">
                                 angelo@exemplo.com
                               </div>
+                              <div className="absolute right-3 top-1/2 -translate-y-1/2 text-green-500">
+                                <CheckCircle2 size={16} />
+                              </div>
                             </div>
                           </div>
 
                           <div className="space-y-1.5">
-                            <label className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Pagamento</label>
-                            <div className="space-y-2">
+                            <label className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Cartão de Crédito</label>
+                            <div className="space-y-3">
                               <div className="relative">
                                 <CreditCard size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
                                 <div className="w-full h-10 pl-9 pr-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-sm flex items-center text-slate-600 dark:text-slate-300">
                                   4582 •••• •••• 9012
                                 </div>
-                                <div className="absolute right-3 top-1/2 -translate-y-1/2 flex gap-1">
-                                  <div className="w-6 h-4 bg-slate-200 dark:bg-slate-600 rounded-sm"></div>
-                                </div>
                               </div>
                               <div className="grid grid-cols-2 gap-3">
                                 <div className="w-full h-10 px-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-sm flex items-center text-slate-600 dark:text-slate-300">
-                                  12/28
+                                  Angelo Garcia
                                 </div>
-                                <div className="w-full h-10 px-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-sm flex items-center text-slate-600 dark:text-slate-300">
-                                  123
+                                <div className="grid grid-cols-2 gap-3">
+                                  <div className="w-full h-10 px-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-sm flex items-center text-slate-600 dark:text-slate-300">
+                                    12/28
+                                  </div>
+                                  <div className="w-full h-10 px-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-sm flex items-center text-slate-600 dark:text-slate-300">
+                                    123
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
 
-                        {/* Security Badge */}
-                        <div className="flex items-center justify-center gap-2 py-4">
-                          <ShieldCheck size={14} className="text-green-500" />
-                          <span className="text-[10px] font-medium text-slate-500 dark:text-slate-400">Dados 100% Criptografados</span>
+                        {/* Order Bump */}
+                        <div className="mb-6 p-3 bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 rounded-xl flex gap-3 items-start cursor-pointer hover:bg-red-100/50 transition-colors">
+                          <div className="mt-1 w-4 h-4 rounded border-2 border-red-500 flex items-center justify-center bg-red-500">
+                            <CheckCircle2 size={12} className="text-white" />
+                          </div>
+                          <div>
+                            <p className="text-xs font-bold text-slate-900 dark:text-white"><span className="text-red-500">SIM!</span> Adicionar E-book Exclusivo</p>
+                            <p className="text-[10px] text-slate-500 dark:text-slate-400 leading-tight mt-1">Leve também o guia completo de estratégias por apenas <span className="font-bold text-slate-900 dark:text-white">R$ 19,90</span>.</p>
+                          </div>
                         </div>
 
                         {/* Pay Button */}
-                        <div className={`h-12 w-full rounded-xl ${activeTheme === 'brutus' ? 'bg-slate-900' :
-                            activeTheme === 'run' ? 'bg-blue-600' :
-                              activeTheme === 'pink' ? 'bg-pink-500' :
-                                activeTheme === 'amaro' ? 'bg-amber-700' :
-                                  'bg-emerald-600'
-                          } flex items-center justify-center text-white font-bold shadow-lg shadow-current/20 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer`}>
-                          Pagar R$ 97,00 Agora
+                        <div className="h-14 w-full rounded-xl bg-green-600 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-green-600/20 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer animate-pulse-slow">
+                          Pagar R$ 116,90 Agora
+                        </div>
+
+                        <div className="mt-4 flex justify-center gap-4 opacity-50 grayscale">
+                          {/* Generic Card Icons Mockup */}
+                          <div className="h-4 w-8 bg-slate-300 rounded"></div>
+                          <div className="h-4 w-8 bg-slate-300 rounded"></div>
+                          <div className="h-4 w-8 bg-slate-300 rounded"></div>
+                          <div className="h-4 w-8 bg-slate-300 rounded"></div>
                         </div>
 
                         {/* Sales Notification Popup */}
                         <motion.div
-                          initial={{ x: -100, opacity: 0 }}
+                          initial={{ x: 100, opacity: 0 }}
                           animate={{ x: 0, opacity: 1 }}
-                          transition={{ delay: 2, duration: 0.5, type: "spring" }}
-                          className="absolute bottom-4 left-4 right-4 bg-white dark:bg-slate-800 rounded-xl shadow-2xl border border-slate-100 dark:border-slate-700 p-3 flex items-center gap-3 z-20"
+                          transition={{ delay: 3, duration: 0.5, type: "spring" }}
+                          className="absolute bottom-4 right-4 bg-white dark:bg-slate-800 rounded-xl shadow-2xl border border-slate-100 dark:border-slate-700 p-3 flex items-center gap-3 z-20 max-w-[240px]"
                         >
                           <div className="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400 shrink-0">
                             <CheckCircle2 size={20} />
                           </div>
                           <div>
-                            <p className="text-xs font-bold text-slate-900 dark:text-white">Nova venda realizada!</p>
-                            <p className="text-[10px] text-slate-500 dark:text-slate-400">Há 2 minutos em São Paulo, SP</p>
+                            <p className="text-xs font-bold text-slate-900 dark:text-white">Nova venda!</p>
+                            <p className="text-[10px] text-slate-500 dark:text-slate-400">Pedro acabou de comprar o Método Bloopi Pro</p>
                           </div>
                         </motion.div>
 
