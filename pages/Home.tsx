@@ -740,19 +740,19 @@ const Home = () => {
             className="relative flex justify-center"
           >
             {/* Decorative Elements */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-yellow-100/50 dark:bg-yellow-900/10 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-blue-100/50 dark:bg-blue-900/10 rounded-full blur-3xl -z-10"></div>
 
             {/* Phone Frame */}
             <div className="relative w-[300px] h-[600px] bg-slate-900 rounded-[3rem] p-4 shadow-2xl border-4 border-slate-800">
               {/* Screen Content */}
-              <div className="w-full h-full bg-yellow-400 rounded-[2.5rem] overflow-hidden relative flex flex-col">
+              <div className="w-full h-full bg-blue-600 rounded-[2.5rem] overflow-hidden relative flex flex-col">
 
                 {/* Status Bar Mockup */}
                 <div className="h-8 w-full flex justify-between items-center px-6 pt-2">
-                  <div className="text-[10px] font-bold text-slate-900">9:41</div>
+                  <div className="text-[10px] font-bold text-white">9:41</div>
                   <div className="flex gap-1">
-                    <div className="w-3 h-3 bg-slate-900 rounded-full opacity-20"></div>
-                    <div className="w-3 h-3 bg-slate-900 rounded-full opacity-20"></div>
+                    <div className="w-3 h-3 bg-white rounded-full opacity-20"></div>
+                    <div className="w-3 h-3 bg-white rounded-full opacity-20"></div>
                   </div>
                 </div>
 
@@ -760,25 +760,25 @@ const Home = () => {
                 <div className="px-6 pt-4 pb-6">
                   <div className="flex justify-between items-center mb-6">
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center text-yellow-400 font-bold text-sm">B</div>
-                      <span className="font-bold text-slate-900">Olá, Lucas</span>
+                      <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center text-blue-600 font-bold text-sm">B</div>
+                      <span className="font-bold text-white">Olá, Lucas</span>
                     </div>
-                    <div className="w-8 h-8 bg-white/30 rounded-full flex items-center justify-center text-slate-900 font-bold text-xs">L</div>
+                    <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-white font-bold text-xs">L</div>
                   </div>
 
                   <div className="space-y-1 mb-6">
-                    <p className="text-xs font-medium text-slate-800 opacity-70">Saldo total em conta</p>
+                    <p className="text-xs font-medium text-blue-100 opacity-80">Saldo total em conta</p>
                     <div className="flex items-center gap-2">
-                      <h3 className="text-3xl font-black text-slate-900">R$ 10.342,00</h3>
+                      <h3 className="text-3xl font-black text-white">R$ 10.342,00</h3>
                     </div>
                   </div>
 
                   <div className="flex gap-3">
-                    <div className="flex-1 bg-slate-900/10 rounded-xl p-3">
-                      <p className="text-[10px] font-bold text-slate-800 mb-1">Saldo a receber</p>
-                      <p className="text-sm font-bold text-slate-900">R$ 5.588,90</p>
+                    <div className="flex-1 bg-white/10 rounded-xl p-3 backdrop-blur-sm">
+                      <p className="text-[10px] font-bold text-blue-100 mb-1">Saldo a receber</p>
+                      <p className="text-sm font-bold text-white">R$ 5.588,90</p>
                     </div>
-                    <div className="flex-1 bg-slate-900 text-yellow-400 rounded-xl p-3 flex items-center justify-center font-bold text-sm shadow-lg shadow-slate-900/20">
+                    <div className="flex-1 bg-white text-blue-600 rounded-xl p-3 flex items-center justify-center font-bold text-sm shadow-lg shadow-black/10">
                       Solicitar saque
                     </div>
                   </div>
@@ -812,23 +812,25 @@ const Home = () => {
                   </div>
                 </div>
 
-                {/* Floating Notification */}
+                {/* Floating Notification - Bottom to Top Animation */}
                 <motion.div
-                  initial={{ x: 50, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ delay: 0.5 }}
-                  className="absolute top-1/2 -right-12 bg-white p-4 rounded-xl shadow-xl border border-slate-100 z-20 w-40"
+                  initial={{ y: 100, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.8, type: "spring", stiffness: 100 }}
+                  className="absolute bottom-8 left-4 right-4 bg-slate-900 p-4 rounded-xl shadow-2xl border border-slate-800 z-20"
                 >
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-600 mb-2">
-                    <DollarSign size={16} />
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-slate-900 mb-0 shrink-0">
+                      <DollarSign size={20} />
+                    </div>
+                    <div>
+                      <p className="text-xs font-bold text-white">Saque efetuado</p>
+                      <p className="text-[10px] text-green-400 font-bold">Concluído agora mesmo</p>
+                    </div>
+                    <div className="ml-auto">
+                      <p className="text-sm font-black text-white">R$ 35k</p>
+                    </div>
                   </div>
-                  <p className="text-xs font-bold text-slate-900">Saque efetuado</p>
-                  <p className="text-[10px] text-green-600 font-bold mb-1">Concluído</p>
-                  <p className="text-sm font-black text-slate-900">R$ 35.000,00</p>
-
-                  {/* Dotted Line Connector */}
-                  <div className="absolute top-1/2 -left-12 w-12 border-t-2 border-dashed border-yellow-400"></div>
-                  <div className="absolute top-1/2 -left-1 w-2 h-2 bg-yellow-400 rounded-full -mt-1"></div>
                 </motion.div>
 
               </div>
@@ -842,7 +844,7 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-block py-2 px-4 rounded-full bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 text-xs font-bold uppercase tracking-wider mb-6">
+            <span className="inline-block py-2 px-4 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-xs font-bold uppercase tracking-wider mb-6">
               Bloopi Pay
             </span>
 
@@ -857,7 +859,7 @@ const Home = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
               {/* Feature 1 */}
               <div className="space-y-3">
-                <div className="w-10 h-10 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-700 dark:text-yellow-400">
+                <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-700 dark:text-blue-400">
                   <DollarSign size={20} />
                 </div>
                 <h4 className="font-bold text-slate-900 dark:text-white">Saque gratuito, ágil e eficiente</h4>
@@ -866,7 +868,7 @@ const Home = () => {
 
               {/* Feature 2 */}
               <div className="space-y-3">
-                <div className="w-10 h-10 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-700 dark:text-yellow-400">
+                <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-700 dark:text-blue-400">
                   <ShieldCheck size={20} />
                 </div>
                 <h4 className="font-bold text-slate-900 dark:text-white">Segurança total na Bloopi Pay</h4>
@@ -875,7 +877,7 @@ const Home = () => {
 
               {/* Feature 3 */}
               <div className="space-y-3">
-                <div className="w-10 h-10 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-700 dark:text-yellow-400">
+                <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-700 dark:text-blue-400">
                   <Wallet size={20} />
                 </div>
                 <h4 className="font-bold text-slate-900 dark:text-white">Controle total do seu dinheiro</h4>
@@ -884,7 +886,7 @@ const Home = () => {
 
               {/* Feature 4 */}
               <div className="space-y-3">
-                <div className="w-10 h-10 rounded-lg bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center text-yellow-700 dark:text-yellow-400">
+                <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-700 dark:text-blue-400">
                   <Users size={20} />
                 </div>
                 <h4 className="font-bold text-slate-900 dark:text-white">Gerente de contas exclusivo</h4>
