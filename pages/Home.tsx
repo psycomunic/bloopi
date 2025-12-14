@@ -285,54 +285,110 @@ const Home = () => {
                   </div>
 
                   {/* Preview Area */}
-                  <div className="flex-1 bg-slate-100 dark:bg-slate-900/50 p-8 md:p-12 flex items-center justify-center overflow-hidden relative">
+                  <div className="flex-1 bg-slate-100 dark:bg-slate-900/50 p-4 md:p-8 flex items-center justify-center overflow-hidden relative">
                     <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
 
                     {/* Mockup Container */}
                     <div className="relative w-full max-w-md mx-auto bg-white dark:bg-slate-800 rounded-[2rem] shadow-2xl border-[8px] border-slate-900 overflow-hidden">
                       {/* Mockup Header */}
                       <div className="bg-slate-900 p-4 flex justify-between items-center">
-                        <div className="w-16 h-1 bg-slate-700 rounded-full"></div>
-                        <div className="w-2 h-2 rounded-full bg-slate-700"></div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 rounded-full bg-red-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
+                          <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                        </div>
+                        <div className="flex items-center gap-1 text-slate-400 text-[10px] font-medium bg-slate-800 px-3 py-1 rounded-full">
+                          <Lock size={10} />
+                          checkout.bloopi.com.br
+                        </div>
                       </div>
 
-                      {/* Mockup Content - Simulating Checkout */}
-                      <div className="p-6 space-y-6 bg-white dark:bg-slate-800">
-                        {/* Theme Header */}
-                        <div className="flex justify-center mb-8">
-                          <div className={`h-8 w-32 rounded-lg ${activeTheme === 'brutus' ? 'bg-slate-900' :
-                            activeTheme === 'run' ? 'bg-blue-600' :
-                              activeTheme === 'pink' ? 'bg-pink-500' :
-                                activeTheme === 'amaro' ? 'bg-amber-700' :
-                                  'bg-emerald-600'
-                            } opacity-90`}></div>
+                      {/* Mockup Content - High Conversion Checkout */}
+                      <div className="p-6 bg-white dark:bg-slate-800 relative">
+
+                        {/* Product Summary */}
+                        <div className="flex gap-4 mb-6 pb-6 border-b border-slate-100 dark:border-slate-700">
+                          <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-600 flex items-center justify-center text-2xl">
+                            📚
+                          </div>
+                          <div className="flex-1">
+                            <h4 className="font-bold text-slate-900 dark:text-white text-sm">Método Bloopi Pro</h4>
+                            <p className="text-xs text-slate-500 dark:text-slate-400 mb-1">Acesso Vitalício + Bônus</p>
+                            <div className="flex items-center gap-2">
+                              <span className="font-black text-slate-900 dark:text-white">R$ 97,00</span>
+                              <span className="text-xs text-slate-400 line-through">R$ 197,00</span>
+                            </div>
+                          </div>
                         </div>
 
                         {/* Form Fields */}
                         <div className="space-y-4">
-                          <div className="space-y-2">
-                            <div className="h-3 w-20 bg-slate-100 dark:bg-slate-700 rounded"></div>
-                            <div className="h-10 w-full bg-slate-50 dark:bg-slate-700/50 rounded-lg border border-slate-200 dark:border-slate-700"></div>
+                          <div className="space-y-1.5">
+                            <label className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Dados Pessoais</label>
+                            <div className="relative">
+                              <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+                              <div className="w-full h-10 pl-9 pr-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-sm flex items-center text-slate-600 dark:text-slate-300">
+                                angelo@exemplo.com
+                              </div>
+                            </div>
                           </div>
-                          <div className="space-y-2">
-                            <div className="h-3 w-24 bg-slate-100 dark:bg-slate-700 rounded"></div>
-                            <div className="h-10 w-full bg-slate-50 dark:bg-slate-700/50 rounded-lg border border-slate-200 dark:border-slate-700"></div>
-                          </div>
-                          <div className="grid grid-cols-2 gap-4">
-                            <div className="h-10 w-full bg-slate-50 dark:bg-slate-700/50 rounded-lg border border-slate-200 dark:border-slate-700"></div>
-                            <div className="h-10 w-full bg-slate-50 dark:bg-slate-700/50 rounded-lg border border-slate-200 dark:border-slate-700"></div>
+
+                          <div className="space-y-1.5">
+                            <label className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Pagamento</label>
+                            <div className="space-y-2">
+                              <div className="relative">
+                                <CreditCard size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+                                <div className="w-full h-10 pl-9 pr-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-sm flex items-center text-slate-600 dark:text-slate-300">
+                                  4582 •••• •••• 9012
+                                </div>
+                                <div className="absolute right-3 top-1/2 -translate-y-1/2 flex gap-1">
+                                  <div className="w-6 h-4 bg-slate-200 dark:bg-slate-600 rounded-sm"></div>
+                                </div>
+                              </div>
+                              <div className="grid grid-cols-2 gap-3">
+                                <div className="w-full h-10 px-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-sm flex items-center text-slate-600 dark:text-slate-300">
+                                  12/28
+                                </div>
+                                <div className="w-full h-10 px-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-sm flex items-center text-slate-600 dark:text-slate-300">
+                                  123
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
 
-                        {/* Pay Button */}
-                        <div className={`h-12 w-full rounded-xl mt-8 ${activeTheme === 'brutus' ? 'bg-slate-900' :
-                          activeTheme === 'run' ? 'bg-blue-600' :
-                            activeTheme === 'pink' ? 'bg-pink-500' :
-                              activeTheme === 'amaro' ? 'bg-amber-700' :
-                                'bg-emerald-600'
-                          } flex items-center justify-center text-white font-bold shadow-lg`}>
-                          Pagar Agora
+                        {/* Security Badge */}
+                        <div className="flex items-center justify-center gap-2 py-4">
+                          <ShieldCheck size={14} className="text-green-500" />
+                          <span className="text-[10px] font-medium text-slate-500 dark:text-slate-400">Dados 100% Criptografados</span>
                         </div>
+
+                        {/* Pay Button */}
+                        <div className={`h-12 w-full rounded-xl ${activeTheme === 'brutus' ? 'bg-slate-900' :
+                            activeTheme === 'run' ? 'bg-blue-600' :
+                              activeTheme === 'pink' ? 'bg-pink-500' :
+                                activeTheme === 'amaro' ? 'bg-amber-700' :
+                                  'bg-emerald-600'
+                          } flex items-center justify-center text-white font-bold shadow-lg shadow-current/20 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer`}>
+                          Pagar R$ 97,00 Agora
+                        </div>
+
+                        {/* Sales Notification Popup */}
+                        <motion.div
+                          initial={{ x: -100, opacity: 0 }}
+                          animate={{ x: 0, opacity: 1 }}
+                          transition={{ delay: 2, duration: 0.5, type: "spring" }}
+                          className="absolute bottom-4 left-4 right-4 bg-white dark:bg-slate-800 rounded-xl shadow-2xl border border-slate-100 dark:border-slate-700 p-3 flex items-center gap-3 z-20"
+                        >
+                          <div className="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400 shrink-0">
+                            <CheckCircle2 size={20} />
+                          </div>
+                          <div>
+                            <p className="text-xs font-bold text-slate-900 dark:text-white">Nova venda realizada!</p>
+                            <p className="text-[10px] text-slate-500 dark:text-slate-400">Há 2 minutos em São Paulo, SP</p>
+                          </div>
+                        </motion.div>
+
                       </div>
                     </div>
                   </div>
@@ -518,8 +574,8 @@ const Home = () => {
                               <div className="text-right">
                                 <p className="text-sm font-bold text-slate-900 dark:text-white">{item.value}</p>
                                 <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${item.status === 'Aprovado'
-                                    ? 'bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400'
-                                    : 'bg-yellow-100 text-yellow-600 dark:bg-yellow-900/30 dark:text-yellow-400'
+                                  ? 'bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400'
+                                  : 'bg-yellow-100 text-yellow-600 dark:bg-yellow-900/30 dark:text-yellow-400'
                                   }`}>
                                   {item.status}
                                 </span>
