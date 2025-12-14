@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowRight,
   CheckCircle2,
@@ -30,7 +30,10 @@ import {
   Bell,
   Search,
   ChevronDown,
-  Wallet
+  Wallet,
+  Star,
+  Quote,
+  ArrowLeft
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -38,6 +41,39 @@ const Home = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<'checkout' | 'dashboard'>('checkout');
   const [activeTheme, setActiveTheme] = useState('brutus');
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  const testimonials = [
+    {
+      text: "Migrar pra Bloopi foi uma das melhores decisões que tomei. Meu checkout anterior era lento e confuso. Com a Bloopi, percebi a diferença já nos primeiros dias: mais velocidade, menos abandono e suporte que responde de verdade.",
+      name: "Camila Rocha",
+      stat: "+1 milhão",
+      statLabel: "faturados com a Bloopi",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80"
+    },
+    {
+      text: "A facilidade de integração e a transparência nas taxas nos deram a segurança que precisávamos para escalar. O suporte exclusivo faz toda a diferença no dia a dia.",
+      name: "Leonardo Martins",
+      stat: "+5 milhões",
+      statLabel: "processados mensalmente",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80"
+    },
+    {
+      text: "Desde que começamos com a Bloopi, nossa taxa de aprovação subiu drasticamente. O checkout transparente passa muito mais credibilidade para o nosso cliente final.",
+      name: "Juliana Costa",
+      stat: "+500 mil",
+      statLabel: "em vendas no último mês",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80"
+    }
+  ];
+
+  const nextTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
 
   return (
     <div className="w-full bg-background-light dark:bg-background-dark overflow-x-hidden">
@@ -908,113 +944,118 @@ const Home = () => {
         </div>
       </section>
 
-      {/* High Volume Section */}
-      < section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900" >
+      {/* Testimonials Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900 overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-          {/* Left Column - Image Mockup */}
+          {/* Left Column - Stats & CTA */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
           >
-            {/* Background decorative blob */}
-            <div className="absolute -top-10 -left-10 w-full h-full bg-slate-50 dark:bg-slate-800 rounded-[3rem] -z-10 transform -rotate-3"></div>
+            <span className="inline-block py-2 px-4 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-xs font-bold uppercase tracking-wider mb-6">
+              VEM SER BLOOPI VOCÊ TAMBÉM!
+            </span>
 
-            {/* Main UI Mockup */}
-            <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-100 dark:border-slate-700 p-6 relative overflow-hidden">
-              {/* Mockup Header */}
-              <div className="flex items-center gap-4 mb-6 border-b border-slate-100 dark:border-slate-700 pb-4">
-                <div className="w-12 h-12 rounded-full relative flex items-center justify-center overflow-hidden bg-slate-900 shadow-lg shadow-blue-500/30">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-400 to-cyan-300 animate-spin-slow opacity-80"></div>
-                  <div className="absolute inset-[2px] bg-slate-900 rounded-full z-10 overflow-hidden flex items-center justify-center">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/50 to-transparent"></div>
-                    <img
-                      src="/bloopi-logo-white.png"
-                      alt="Bloopi Logo"
-                      className="w-6 h-6 object-contain relative z-20"
-                    />
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight mb-6">
+              +2.000 e-commerces
+            </h2>
+            <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+              já tem a Bloopi como Gateway e Checkout para pagamentos. Nossos clientes vendem mais e se preocupam menos com burocracia.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+              <button className="h-14 px-8 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold text-lg shadow-lg hover:bg-slate-800 dark:hover:bg-slate-100 transition-all transform hover:-translate-y-1">
+                Criar conta grátis
+              </button>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <div className="bg-white p-2 rounded-lg shadow-sm">
+                <img src="https://logodownload.org/wp-content/uploads/2014/06/reclame-aqui-logo-1.png" alt="Reclame Aqui" className="h-8" />
+              </div>
+              <div>
+                <p className="text-xs font-bold text-slate-500 uppercase">Nota no Reclame Aqui</p>
+                <div className="flex items-center gap-2">
+                  <span className="text-2xl font-black text-slate-900 dark:text-white">9.1</span>
+                  <div className="flex text-yellow-400">
+                    {[1, 2, 3, 4, 5].map((_, i) => (
+                      <Star key={i} size={16} fill="currentColor" />
+                    ))}
                   </div>
-                  <div className="absolute inset-0 z-20 bg-gradient-to-br from-transparent via-transparent to-blue-500/20 rounded-full"></div>
-                </div>
-                <div className="space-y-2">
-                  <div className="h-3 w-32 bg-slate-100 dark:bg-slate-700 rounded"></div>
-                  <div className="h-2 w-20 bg-slate-100 dark:bg-slate-700 rounded"></div>
                 </div>
               </div>
-              {/* Mockup Grid */}
-              <div className="grid grid-cols-3 gap-4">
-                {[
-                  "/product-shoe.jpg",
-                  "/product-2.jpg",
-                  "/product-3.jpg",
-                  "/product-4.jpg",
-                  "/product-6.jpg",
-                  "/product-7.jpg"
-                ].map((src, i) => (
-                  <div key={i} className="space-y-2">
-                    <div className="aspect-[3/4] rounded-lg bg-slate-100 dark:bg-slate-700 overflow-hidden relative group">
-                      <img
-                        src={src}
-                        alt="Fashion Product"
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="h-2 w-16 bg-slate-100 dark:bg-slate-700 rounded mx-auto"></div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Floating Revenue Card */}
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-                className="absolute top-10 right-10 bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 text-center z-20"
-              >
-                <div className="w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-3">
-                  <span className="font-bold text-xl">$</span>
-                </div>
-                <div className="text-2xl font-black text-slate-900 dark:text-white mb-1">
-                  +R$ 750.000,00
-                </div>
-                <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">
-                  Faturamento Mensal
-                </div>
-              </motion.div>
             </div>
           </motion.div>
 
-          {/* Right Column - Content */}
+          {/* Right Column - Testimonials Carousel */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="relative"
           >
-            <span className="inline-block py-2 px-4 rounded-full bg-blue-50 dark:bg-blue-900/20 text-primary text-xs font-bold uppercase tracking-wider mb-6">
-              Temos as melhores soluções para seu e-commerce
-            </span>
+            {/* Decorative Elements */}
+            <div className="absolute -top-10 -right-10 w-64 h-64 bg-blue-400/10 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-cyan-400/10 rounded-full blur-3xl -z-10"></div>
 
-            <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight mb-6">
-              Seu e-commerce fatura mais de R$200 mil por mês?
-            </h2>
+            <div className="relative bg-white dark:bg-slate-800 rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-700 p-8 md:p-10 min-h-[400px] flex flex-col justify-between">
+              <Quote size={48} className="text-blue-100 dark:text-blue-900/30 absolute top-8 right-8" />
 
-            <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-              Entre em contato com nosso time comercial e descubra as taxas especiais que temos reservadas para você.
-            </p>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentTestimonial}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="mb-8"
+                >
+                  <div className="flex text-yellow-400 mb-6">
+                    {[1, 2, 3, 4, 5].map((_, i) => (
+                      <Star key={i} size={20} fill="currentColor" />
+                    ))}
+                  </div>
 
-            <button className="h-14 px-8 rounded-xl bg-primary text-white font-bold text-lg shadow-lg shadow-primary/30 hover:bg-primary-dark hover:scale-105 transition-all flex items-center gap-2">
-              Falar com o comercial
-              <ArrowRight size={20} />
-            </button>
+                  <p className="text-xl md:text-2xl text-slate-700 dark:text-slate-300 font-medium leading-relaxed italic">
+                    "{testimonials[currentTestimonial].text}"
+                  </p>
+                </motion.div>
+              </AnimatePresence>
+
+              <div className="flex items-center gap-4 border-t border-slate-100 dark:border-slate-700 pt-6 mt-auto">
+                <div className="w-14 h-14 rounded-full bg-slate-200 overflow-hidden shrink-0">
+                  <img src={testimonials[currentTestimonial].image} alt={testimonials[currentTestimonial].name} className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-slate-900 dark:text-white text-lg">{testimonials[currentTestimonial].name}</h4>
+                  <p className="text-blue-600 dark:text-blue-400 font-bold text-sm">{testimonials[currentTestimonial].stat} <span className="text-slate-500 dark:text-slate-400 font-normal">{testimonials[currentTestimonial].statLabel}</span></p>
+                </div>
+              </div>
+
+              {/* Navigation Buttons */}
+              <div className="flex gap-2 absolute bottom-8 right-8 z-10">
+                <button
+                  onClick={prevTestimonial}
+                  className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-blue-600 hover:text-white transition-colors"
+                >
+                  <ArrowLeft size={20} />
+                </button>
+                <button
+                  onClick={nextTestimonial}
+                  className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-blue-600 hover:text-white transition-colors"
+                >
+                  <ArrowRight size={20} />
+                </button>
+              </div>
+            </div>
           </motion.div>
 
         </div>
-      </section >
+      </section>
     </div >
   );
 };
