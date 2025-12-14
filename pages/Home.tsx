@@ -923,9 +923,13 @@ const Home = () => {
               <div className="flex items-center gap-4 mb-6 border-b border-slate-100 dark:border-slate-700 pb-4">
                 <div className="w-12 h-12 rounded-full relative flex items-center justify-center overflow-hidden bg-slate-900 shadow-lg shadow-blue-500/30">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-400 to-cyan-300 animate-spin-slow opacity-80"></div>
-                  <div className="absolute inset-[2px] bg-slate-900 rounded-full z-10 overflow-hidden">
+                  <div className="absolute inset-[2px] bg-slate-900 rounded-full z-10 overflow-hidden flex items-center justify-center">
                     <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/50 to-transparent"></div>
-                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-400/30 blur-md rounded-full animate-pulse"></div>
+                    <img
+                      src="/bloopi-logo-white.png"
+                      alt="Bloopi Logo"
+                      className="w-6 h-6 object-contain relative z-20"
+                    />
                   </div>
                   <div className="absolute inset-0 z-20 bg-gradient-to-br from-transparent via-transparent to-blue-500/20 rounded-full"></div>
                 </div>
