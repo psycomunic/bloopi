@@ -34,8 +34,8 @@ const CheckoutPage = () => {
                         </span>
                         <h1 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white mb-8 leading-tight">
                             Checkout Bloopi: <br />
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-emerald-600">
-                                O mais rápido do mundo.
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
+                                O mais rápido do Mercado.
                             </span>
                         </h1>
                         <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed">
