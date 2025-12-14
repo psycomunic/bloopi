@@ -77,9 +77,9 @@ const Footer = () => {
                         <h4 className="font-bold text-slate-900 dark:text-white mb-6">Recursos</h4>
                         <ul className="space-y-4 text-sm text-slate-500 dark:text-slate-400">
                             <li><Link to="/resources" className="hover:text-primary transition-colors">Bloopi Pay</Link></li>
-                            <li><Link to="/resources" className="hover:text-primary transition-colors">Funcionalidades</Link></li>
-                            <li><Link to="/resources" className="hover:text-primary transition-colors">Integrações</Link></li>
-                            <li><Link to="/resources" className="hover:text-primary transition-colors">Checkout 3.1</Link></li>
+                            <li><Link to="/features" className="hover:text-primary transition-colors">Funcionalidades</Link></li>
+                            <li><Link to="/integrations" className="hover:text-primary transition-colors">Integrações</Link></li>
+                            <li><Link to="/checkout-3-1" className="hover:text-primary transition-colors">Checkout 3.1</Link></li>
                             <li><Link to="/developers" className="hover:text-primary transition-colors">Documentação - API</Link></li>
                         </ul>
                     </div>
