@@ -22,11 +22,19 @@ import HelpCenter from './pages/HelpCenter';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Contact from './pages/Contact';
-
 import Taxas from './pages/Taxas';
 import Resources from './pages/Resources';
 import Developers from './pages/Developers';
 import Testimonials from './pages/Testimonials';
+
+// New Pages
+import BloopiPay from './pages/BloopiPay';
+import Features from './pages/Features';
+import Integrations from './pages/Integrations';
+import CheckoutPage from './pages/CheckoutPage';
+import Support from './pages/Support';
+import Institutional from './pages/Institutional';
+
 import ChatWidget from './components/ChatWidget';
 import Footer from './components/Footer';
 
@@ -162,6 +170,14 @@ const App = () => {
           <Route path="/resources" element={<Resources />} />
           <Route path="/developers" element={<Developers />} />
           <Route path="/testimonials" element={<Testimonials />} />
+
+          {/* New Pages */}
+          <Route path="/bloopi-pay" element={<BloopiPay />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/integrations" element={<Integrations />} />
+          <Route path="/checkout-3-1" element={<CheckoutPage />} />
+          <Route path="/support" element={<Support />} />
+          <Route path="/institutional" element={<Institutional />} />
         </Routes>
       </Layout>
     </HashRouter>
