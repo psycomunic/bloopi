@@ -33,7 +33,9 @@ import {
   Wallet,
   Star,
   Quote,
-  ArrowLeft
+  ArrowLeft,
+  Minus,
+  ChevronRight
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -42,6 +44,30 @@ const Home = () => {
   const [activeTab, setActiveTab] = useState<'checkout' | 'dashboard'>('checkout');
   const [activeTheme, setActiveTheme] = useState('brutus');
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  const faqs = [
+    {
+      q: "Quanto tempo é necessário para realizar um saque?",
+      a: "Os saques na Bloopi são processados instantaneamente via PIX, 24 horas por dia, 7 dias por semana. Assim que você solicita, o dinheiro cai na sua conta cadastrada em poucos segundos."
+    },
+    {
+      q: "Não possuo CNPJ, posso me inscrever?",
+      a: "Sim! Aceitamos cadastros tanto de Pessoa Física (CPF) quanto de Pessoa Jurídica (CNPJ). O processo de verificação é simples e rápido para ambos."
+    },
+    {
+      q: "Quanto pago de mensalidade ou adesão?",
+      a: "Zero. A Bloopi não cobra taxa de adesão nem mensalidade. Você paga apenas uma pequena taxa sobre cada venda aprovada. Se não vender, não paga nada."
+    },
+    {
+      q: "Posso ter mais de uma loja em uma conta?",
+      a: "Com certeza. Nossa plataforma permite gerenciar múltiplos checkouts e lojas dentro do mesmo painel, facilitando a gestão do seu império de e-commerce."
+    },
+    {
+      q: "Vou ter um gerente de conta?",
+      a: "Clientes com volume de processamento acima de R$ 50k/mês têm acesso a um gerente de contas exclusivo para auxiliar em estratégias de crescimento e suporte prioritário."
+    }
+  ];
 
   const testimonials = [
     {
@@ -1051,6 +1077,100 @@ const Home = () => {
               </div>
             </div>
           </motion.div>
+
+        </div>
+      </section>
+
+      {/* FAQ Section with Glassmorphism */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-slate-900">
+        {/* Background Gradients */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+          <div className="absolute top-1/4 -left-64 w-96 h-96 bg-blue-600/30 rounded-full blur-[100px]"></div>
+          <div className="absolute bottom-1/4 -right-64 w-96 h-96 bg-purple-600/30 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 relative z-10">
+
+          {/* Left Column - Intro & Contact */}
+          <div className="lg:col-span-5">
+            <span className="inline-block py-2 px-4 rounded-full bg-yellow-400/10 text-yellow-400 text-xs font-bold uppercase tracking-wider mb-6 border border-yellow-400/20">
+              SUPORTE
+            </span>
+
+            <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-6">
+              Dúvidas comuns que recebemos com frequência
+            </h2>
+
+            <p className="text-lg text-slate-400 mb-10 leading-relaxed">
+              Dúvidas persistem? Fale com nossa equipe de especialistas para uma orientação personalizada.
+            </p>
+
+            {/* Glass Contact Card */}
+            <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 shadow-2xl">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white shadow-lg">
+                  <Mail size={24} />
+                </div>
+                <div>
+                  <h4 className="text-white font-bold text-lg">Fale com a gente</h4>
+                  <p className="text-slate-400 text-sm">Estamos online para te ajudar</p>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <a href="mailto:suporte@yever.com.br" className="block p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/20 transition-all text-slate-300 hover:text-white text-sm font-medium">
+                  suporte@yever.com.br
+                </a>
+                <a href="mailto:comercial@yever.com.br" className="block p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/20 transition-all text-slate-300 hover:text-white text-sm font-medium">
+                  comercial@yever.com.br
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Glass Accordion */}
+          <div className="lg:col-span-7 space-y-4">
+            {faqs.map((faq, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className={`backdrop-blur-md border rounded-2xl overflow-hidden transition-all duration-300 ${openFaq === i
+                    ? 'bg-white/10 border-white/20 shadow-lg'
+                    : 'bg-white/5 border-white/5 hover:bg-white/10 hover:border-white/10'
+                  }`}
+              >
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="w-full flex items-center justify-between p-6 text-left"
+                >
+                  <span className={`text-lg font-bold transition-colors ${openFaq === i ? 'text-white' : 'text-slate-300'}`}>
+                    {faq.q}
+                  </span>
+                  <span className={`p-2 rounded-full transition-all ${openFaq === i ? 'bg-white/20 text-white rotate-180' : 'bg-white/5 text-slate-400'}`}>
+                    {openFaq === i ? <Minus size={16} /> : <Plus size={16} />}
+                  </span>
+                </button>
+
+                <AnimatePresence>
+                  {openFaq === i && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                      <div className="p-6 pt-0 text-slate-400 leading-relaxed border-t border-white/10">
+                        {faq.a}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            ))}
+          </div>
 
         </div>
       </section>
