@@ -973,9 +973,7 @@ const Home = () => {
             </div>
 
             <div className="flex items-center gap-4">
-              <div className="bg-white p-2 rounded-lg shadow-sm">
-                <img src="https://logodownload.org/wp-content/uploads/2014/06/reclame-aqui-logo-1.png" alt="Reclame Aqui" className="h-8" />
-              </div>
+              <img src="/ra1000-logo.png" alt="RA1000 Reclame Aqui" className="h-16 object-contain" />
               <div>
                 <p className="text-xs font-bold text-slate-500 uppercase">Nota no Reclame Aqui</p>
                 <div className="flex items-center gap-2">
