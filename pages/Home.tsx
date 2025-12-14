@@ -18,6 +18,10 @@ import {
   ScanSearch,
   Link,
   BarChart3,
+  Truck,
+  Store,
+  Coins,
+  Scale,
   Activity,
   Mail,
   CheckCircle,
@@ -840,6 +844,162 @@ const Home = () => {
               Criar conta grátis
             </button>
           </div>
+        </div>
+      </section>
+
+      {/* International Sales Module (Magazord Style) */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900 border-y border-white/5 overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[100px] -mr-40 -mt-40"></div>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+          <div>
+            <span className="text-red-500 font-bold tracking-wider uppercase text-sm mb-2 block">Expansão para novos mercados</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">Módulo de Venda Internacional</h2>
+            <p className="text-lg text-slate-400 mb-8 leading-relaxed">
+              Conquiste o mercado internacional com facilidade e eficiência. O nosso Módulo de Venda Internacional é a chave para desbloquear o potencial ilimitado do seu negócio.
+            </p>
+
+            <div className="space-y-6 mb-10">
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-red-500 shrink-0 border border-slate-700">
+                  <Globe size={24} />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-white mb-1">Maior alcance para seu negócio</h4>
+                  <p className="text-sm text-slate-400">Prepare-se para atender clientes em todas as partes do mundo.</p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-red-500 shrink-0 border border-slate-700">
+                  <Truck size={24} />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-white mb-1">Logística Integrada</h4>
+                  <p className="text-sm text-slate-400">Soluções de cross border otimizadas com transportadoras internacionais.</p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-red-500 shrink-0 border border-slate-700">
+                  <Scale size={24} />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-white mb-1">Gestão de Impostos</h4>
+                  <p className="text-sm text-slate-400">Cálculo automático de tarifas e impostos em diferentes países.</p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-red-500 shrink-0 border border-slate-700">
+                  <Coins size={24} />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-white mb-1">Múltiplas Moedas</h4>
+                  <p className="text-sm text-slate-400">Suporte a transações em diversas moedas e idiomas locais.</p>
+                </div>
+              </div>
+            </div>
+
+            <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg hover:shadow-red-600/20 transform hover:-translate-y-1">
+              Fale com um especialista
+            </button>
+          </div>
+
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-tr from-slate-900 via-transparent to-transparent z-10"></div>
+            <img
+              src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80"
+              alt="International Sales"
+              className="w-full rounded-2xl shadow-2xl border border-slate-800 grayscale hover:grayscale-0 transition-all duration-700"
+            />
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              className="absolute -top-10 -right-10 w-32 h-32 rounded-full border border-red-500/30 flex items-center justify-center z-0"
+            >
+              <div className="w-3 h-3 bg-red-500 rounded-full absolute -top-1.5 left-1/2 -translate-x-1/2"></div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Small Entrepreneurs Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900/50">
+        <div className="max-w-7xl mx-auto text-center mb-16">
+          <span className="inline-block py-2 px-4 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-xs font-bold uppercase tracking-wider mb-6">
+            PEQUENOS EMPREENDEDORES
+          </span>
+          <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-6">Feito para crescer com você</h2>
+          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            Sabemos que começar é desafiador. Por isso, criamos ferramentas específicas para simplificar a jornada de quem está construindo o próprio sonho.
+          </p>
+        </div>
+
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div
+            whileHover={{ y: -10 }}
+            className="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-700"
+          >
+            <div className="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center text-orange-600 mb-6">
+              <Store size={28} />
+            </div>
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Sua loja, sua cara</h3>
+            <p className="text-slate-600 dark:text-slate-400">Personalização simplificada para você deixar o checkout com a identidade visual da sua marca, sem precisar de programador.</p>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ y: -10 }}
+            className="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-700 relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl">POPULAR</div>
+            <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center text-blue-600 mb-6">
+              <Zap size={28} />
+            </div>
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Comece em minutos</h3>
+            <p className="text-slate-600 dark:text-slate-400">Setup instantâneo. Cadastrou, configurou, vendeu. Sem implementações complexas ou taxas de adesão.</p>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ y: -10 }}
+            className="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-700"
+          >
+            <div className="w-14 h-14 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center text-green-600 mb-6">
+              <TrendingUp size={28} />
+            </div>
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Taxas que cabem no bolso</h3>
+            <p className="text-slate-600 dark:text-slate-400">Condições especiais para quem fatura até R$ 50k/mês, permitindo que você reinvista mais no seu negócio.</p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Start Simple (Up to 10k) Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-700 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 hover:opacity-30 transition-opacity duration-1000"></div>
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-10 right-10 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-6">Vende até R$ 10.000,00 mês?</h2>
+            <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+              Comece com o <span className="font-bold text-white border-b-2 border-yellow-400">Plano Starter</span>. Zero mensalidade, suporte via chat e recebimento em D+2. A melhor opção para validar seu negócio.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-700 font-bold py-4 px-10 rounded-full shadow-2xl hover:bg-blue-50 transition-all transform hover:-translate-y-1">
+                Começar Agora Grátis
+              </button>
+              <button className="bg-transparent border-2 border-white/30 text-white font-bold py-4 px-8 rounded-full hover:bg-white/10 transition-all">
+                Ver tabela de taxas
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
 
