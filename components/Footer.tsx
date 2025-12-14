@@ -46,14 +46,14 @@ const Footer = () => {
 
                     <div className="flex-1 text-center md:text-right z-10">
                         <h3 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-3">
-                            Rastreie sua compra em tempo real
+                            Pronto para escalar suas vendas?
                         </h3>
                         <p className="text-slate-600 dark:text-slate-300 text-base mb-6 max-w-md ml-auto">
-                            Tenha total controle sobre sua entrega. Digite seu código e acompanhe agora.
+                            Junte-se a milhares de empreendedores que já transformaram seus negócios com a Bloopi.
                         </p>
-                        <Link to="/help" className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-dark hover:shadow-lg hover:-translate-y-1 transition-all">
-                            Rastrear meu pedido <ArrowRight size={20} />
-                        </Link>
+                        <button className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-dark hover:shadow-lg hover:-translate-y-1 transition-all shadow-blue-500/20 shadow-lg">
+                            Criar conta grátis <ArrowRight size={20} />
+                        </button>
                     </div>
                 </div>
             </div>
@@ -127,7 +127,7 @@ const Footer = () => {
                     </button>
                 </div>
             </div>
-        </footer>
+        </footer >
     );
 };
 
