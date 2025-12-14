@@ -182,19 +182,16 @@ const Home = () => {
 
               {/* Floating Elements */}
               <motion.div
-                animate={{ y: [0, -20, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-20 right-10 bg-white/10 backdrop-blur-xl p-4 rounded-2xl border border-white/20 shadow-2xl z-20 hidden md:block"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
+                className="absolute top-20 right-10 z-20 hidden md:block"
               >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-slate-900">
-                    <TrendingUp size={24} />
-                  </div>
-                  <div>
-                    <div className="text-xs text-blue-200">Conversão</div>
-                    <div className="text-xl font-bold text-white">+32%</div>
-                  </div>
-                </div>
+                <img
+                  src="/sales-notification-hero.png"
+                  alt="Nova venda aprovada"
+                  className="w-80 drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+                />
               </motion.div>
             </motion.div>
           </div>
