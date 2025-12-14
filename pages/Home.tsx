@@ -1118,11 +1118,11 @@ const Home = () => {
               </div>
 
               <div className="space-y-3">
-                <a href="mailto:suporte@yever.com.br" className="block p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/20 transition-all text-slate-300 hover:text-white text-sm font-medium">
-                  suporte@yever.com.br
+                <a href="mailto:suporte@bloopi.com.br" className="block p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/20 transition-all text-slate-300 hover:text-white text-sm font-medium">
+                  suporte@bloopi.com.br
                 </a>
-                <a href="mailto:comercial@yever.com.br" className="block p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/20 transition-all text-slate-300 hover:text-white text-sm font-medium">
-                  comercial@yever.com.br
+                <a href="mailto:comercial@bloopi.com.br" className="block p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/20 transition-all text-slate-300 hover:text-white text-sm font-medium">
+                  comercial@bloopi.com.br
                 </a>
               </div>
             </div>
@@ -1138,8 +1138,8 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className={`backdrop-blur-md border rounded-2xl overflow-hidden transition-all duration-300 ${openFaq === i
-                    ? 'bg-white/10 border-white/20 shadow-lg'
-                    : 'bg-white/5 border-white/5 hover:bg-white/10 hover:border-white/10'
+                  ? 'bg-white/10 border-white/20 shadow-lg'
+                  : 'bg-white/5 border-white/5 hover:bg-white/10 hover:border-white/10'
                   }`}
               >
                 <button

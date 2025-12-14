@@ -19,46 +19,40 @@ const Footer = () => {
 
             {/* Top Banner */}
             <div className="max-w-5xl mx-auto px-4 relative -mt-32 mb-16 z-20">
-                <div className="bg-white dark:bg-slate-800 rounded-3xl shadow-xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-slate-100 dark:border-slate-700 relative overflow-hidden">
+                <div className="backdrop-blur-xl bg-white/80 dark:bg-slate-800/80 rounded-3xl shadow-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-white/20 dark:border-slate-700/50 relative overflow-hidden">
 
-                    {/* Decorative Circle */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-50 dark:bg-blue-900/20 rounded-full blur-3xl -z-10"></div>
+                    {/* Decorative Elements */}
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -z-10"></div>
+                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10"></div>
 
                     <div className="flex-1 text-center md:text-left z-10">
-                        <img src="/logo.png" alt="Bloopi" className="h-8 mx-auto md:mx-0 mb-4" />
-                        <p className="text-slate-500 dark:text-slate-400 mb-6">Acompanhe nossas redes:</p>
+                        <img src="/logo.png" alt="Bloopi" className="h-8 mx-auto md:mx-0 mb-6" />
+                        <p className="text-slate-600 dark:text-slate-300 mb-6 font-medium">Acompanhe nossas redes:</p>
                         <div className="flex justify-center md:justify-start gap-4">
-                            <a href="#" className="p-3 rounded-full bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all">
+                            <a href="#" className="p-3 rounded-xl bg-white dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white shadow-sm hover:shadow-md transition-all">
                                 <Facebook size={20} />
                             </a>
-                            <a href="#" className="p-3 rounded-full bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all">
+                            <a href="#" className="p-3 rounded-xl bg-white dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white shadow-sm hover:shadow-md transition-all">
                                 <Linkedin size={20} />
                             </a>
-                            <a href="#" className="p-3 rounded-full bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all">
+                            <a href="#" className="p-3 rounded-xl bg-white dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white shadow-sm hover:shadow-md transition-all">
                                 <Youtube size={20} />
                             </a>
-                            <a href="#" className="p-3 rounded-full bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white transition-all">
+                            <a href="#" className="p-3 rounded-xl bg-white dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white shadow-sm hover:shadow-md transition-all">
                                 <Instagram size={20} />
                             </a>
                         </div>
                     </div>
 
-                    {/* Center Image */}
-                    <div className="relative z-10 -my-20">
-                        <div className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-primary/10 flex items-end justify-center overflow-hidden border-4 border-white dark:border-slate-800 shadow-lg">
-                            <img
-                                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                                alt="Support"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-                    </div>
-
                     <div className="flex-1 text-center md:text-right z-10">
-                        <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Fez uma compra? Veja o seu Pedido!</h3>
-                        <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">Acompanhe o seu pedido em tempo real.</p>
-                        <Link to="/help" className="inline-flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">
-                            Consultar Pedido <ArrowRight size={16} />
+                        <h3 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-3">
+                            Rastreie sua compra em tempo real
+                        </h3>
+                        <p className="text-slate-600 dark:text-slate-300 text-base mb-6 max-w-md ml-auto">
+                            Tenha total controle sobre sua entrega. Digite seu código e acompanhe agora.
+                        </p>
+                        <Link to="/help" className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-primary-dark hover:shadow-lg hover:-translate-y-1 transition-all">
+                            Rastrear meu pedido <ArrowRight size={20} />
                         </Link>
                     </div>
                 </div>
