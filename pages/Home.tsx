@@ -198,6 +198,51 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Partners Carousel Section */}
+      <section className="py-10 bg-slate-900 border-y border-white/5 overflow-hidden relative z-20">
+        <div className="max-w-7xl mx-auto px-4 text-center mb-8">
+          <p className="text-slate-400 text-sm font-medium uppercase tracking-wider">Integrado aos principais serviços de pagamentos do mercado</p>
+        </div>
+
+        <div className="flex relative overflow-hidden">
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-slate-900 to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-slate-900 to-transparent z-10"></div>
+
+          <motion.div
+            className="flex gap-12 items-center"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              duration: 20,
+              ease: "linear",
+              repeat: Infinity
+            }}
+          >
+            {[...Array(2)].map((_, i) => (
+              <React.Fragment key={i}>
+                {[
+                  { name: 'PayPal', src: '/partners/paypal.png' },
+                  { name: 'PagBank', src: '/partners/pagbank.png' },
+                  { name: 'Safe2Pay', src: '/partners/safe2pay.png' },
+                  { name: 'Barte', src: '/partners/barte.png' },
+                  { name: 'Revere', src: '/partners/revere.png' },
+                ].map((partner, index) => (
+                  <div
+                    key={`${i}-${index}`}
+                    className="w-40 h-20 rounded-2xl bg-white/5 backdrop-blur-md border border-white/5 flex items-center justify-center p-4 hover:bg-white/10 hover:border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer group shrink-0"
+                  >
+                    <img
+                      src={partner.src}
+                      alt={partner.name}
+                      className="max-w-full max-h-full object-contain opacity-50 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
+                    />
+                  </div>
+                ))}
+              </React.Fragment>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* Features Grid Section */}
       <section className="relative z-20 -mt-32 px-4 sm:px-6 lg:px-8 pb-24">
         <div className="max-w-7xl mx-auto bg-white dark:bg-slate-800 rounded-[2.5rem] shadow-xl border border-slate-100 dark:border-slate-700 p-8 md:p-12 lg:p-16">
