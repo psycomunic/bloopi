@@ -134,11 +134,11 @@ const HelpCenter = () => {
       <section className="py-24 px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <span className="inline-block py-1 px-3 rounded-full bg-yellow-100 text-yellow-800 text-xs font-bold uppercase tracking-wider mb-4">Suporte</span>
+            <span className="inline-block py-1 px-3 rounded-full bg-yellow-100 text-yellow-800 text-xs font-bold uppercase tracking-wider mb-4 border border-yellow-200">Suporte</span>
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-4">
               Dúvidas comuns que recebemos com frequência
             </h2>
-            <p className="text-slate-500 dark:text-slate-400">
+            <p className="text-slate-600 dark:text-slate-300 font-medium">
               Esclarecendo suas dúvidas sobre a Bloopi e nossos serviços.
             </p>
           </div>

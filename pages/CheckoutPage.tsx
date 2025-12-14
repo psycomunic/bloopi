@@ -10,7 +10,8 @@ import {
     MousePointer2,
     Lock,
     Timer,
-    CreditCard
+    CreditCard,
+    DollarSign
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -88,7 +89,10 @@ const CheckoutPage = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
                             <div className="space-y-8">
                                 <h2 className="text-3xl md:text-5xl font-black text-white leading-tight">
-                                    Menos cliques.<br />More vendas.
+                                    Menos cliques.<br />
+                                    <span className="flex items-center gap-2">
+                                        Mais vendas. <DollarSign className="text-green-400" size={32} />
+                                    </span>
                                 </h2>
                                 <p className="text-lg text-slate-400 leading-relaxed">
                                     O Checkout 3.1 foi reescrito do zero. Removemos campos desnecessários, otimizamos o preenchimento automático e integramos as melhores carteiras digitais.
