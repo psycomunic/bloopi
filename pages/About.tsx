@@ -123,39 +123,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Team */}
-      <div className="w-full py-20 px-4 md:px-10">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-slate-900 dark:text-white text-3xl font-bold mb-4">Quem Faz Acontecer</h2>
-          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-12">Um time multidisciplinar apaixonado por resolver problemas complexos com soluções simples.</p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { name: 'Ana Silva', role: 'CEO & Co-Founder', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDQFf2JcU1KQx3dZrVOcWYO-ojyOBqEzUlCryp6KpxNx0XEkQILe1-7sho_yOj4nh3rqQIdbRNm4bPNSdV2pwQEKd0fxBWQYBn3g7VqmjQ2_sTv8dEFJaB2E2rMiD5yvPI6vIXwhTdjpRsxOvlMx61FghSUzxL6yPXuDZlxyrJWlK7dvdJPHGV6b5T5x32EZ3z5QCgakFn2P4zNwM8TwKMt50tUTkZrhJYEi75QOgQnLfbQiKoSvEWPeV3Gwqgv1HB8r9O7yH-g-vsi' },
-              { name: 'Carlos Mendez', role: 'CTO', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC7jaTFt8sn0YntXRkoTLJMMJI54h6geNdo3Rso_dFgLPb64-UexsfA-ZnKXffhaXLZ9tgybgIs4qxLetslnGkkkgyN3Oh4WTBEpZ7_vgXMBi3JenlvTSKBvxO_KDipqugaRiy1fHT5IlpLk7xoo24bXOEEShJ9L6L-SuCcFTbyBGdzrzm3gxFWqo2kZ0v0Gqvt5WACNZQw4cBSdUTXTpuDxHjrZQOZEmGkYqM0iICZpHi_MeJEDLSwY2Ts1Jy0KsJKJh7NqCg90cf4' },
-              { name: 'Julia Santos', role: 'Head de Produto', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBkk2bidNGXFonMl4anUlLGUtnHQ8KDMuVvXjBI2DMY7Emnkb011Ld4xmy4fQLtfJIdqjCpP_47C_RljV2Aln0fkdqp4RPkdm8UAcodETF3zcY8loE6NA8D-xSiFF6rloWYisnQwaUC60vvXlojfbDScgiNF6XnMZP2fCvs8p8Nm9u5fJdnPHB_sqMpAs2JSJypNOUFNUTvWvjpGN39MmQs957XlDvFyj0W7uYwZBM7H9ZB9yZ61xkY_tJLBLHLJPKCZkkyS2Rb3J6R' },
-              { name: 'Roberto Lima', role: 'CFO', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAZraKHptLUcrXY2AKZS_bANlJdNwojNb9vzp9ltaEbG89_giPTUA5s1_toSkw1iINJPbh46L8jp_KTEUX0zr8jEV2WUhkDYPTCGk0hNbFf8grk_0pN70mSCfXTE8702NVBZYr4Uu4M_kxKJiyCruTJ56bq9kbEUCqJJpar7_NRkLwClPeiL3l8gW-mAhn4ypRANK6LE0AAXHKzm50qqLUA-k3w7iOIjlWwjCIgWatZBIV9dYeCPRzVzO6mQA45IfLtS1GvG_01zieN' }
-            ].map((person, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="glass rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300"
-              >
-                <div className="w-full aspect-[4/5] bg-gray-200 overflow-hidden">
-                  <img src={person.img} alt={person.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
-                </div>
-                <div className="p-4 text-center">
-                  <h3 className="font-bold text-slate-900 dark:text-white">{person.name}</h3>
-                  <p className="text-sm text-primary font-medium">{person.role}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
