@@ -61,6 +61,7 @@ const Header = () => {
 
   const navLinks = [
     { name: 'Soluções', path: '/' },
+    { name: 'Taxas', path: '/taxas' },
     { name: 'Checkout 3.1', path: '/checkout-3-1' },
     { name: 'Sobre Nós', path: '/about' },
     { name: 'Blog', path: '/blog' },

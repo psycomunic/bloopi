@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Calculator, DollarSign, CreditCard, Smartphone } from 'lucide-react';
+import { PixIcon } from './icons/PixIcon';
 
 const FeeCalculator = () => {
     const [amount, setAmount] = useState<string>('100,00');
@@ -116,8 +117,8 @@ const FeeCalculator = () => {
                                     : 'border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-800 text-slate-500 hover:border-primary/30'
                                     }`}
                             >
-                                <Smartphone size={24} />
-                                <span className="text-sm font-bold">Pix</span>
+                                <PixIcon size={24} />
+                                <span className="text-sm font-bold flex items-center gap-1">Pix <PixIcon size={14} /></span>
                             </button>
                         </div>
                     </div>

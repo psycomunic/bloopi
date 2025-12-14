@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckCircle2, DollarSign, Zap, TrendingUp, ArrowRight, ShieldCheck, Smartphone, CreditCard } from 'lucide-react';
+import { PixIcon } from '../components/icons/PixIcon';
 import FeeCalculator from '../components/FeeCalculator';
 import { motion } from 'framer-motion';
 
@@ -67,9 +68,11 @@ const Taxas = () => {
                         >
                             <div className="absolute top-0 right-0 bg-primary/10 text-primary text-xs font-black px-4 py-2 rounded-bl-2xl">MAIS POPULAR</div>
                             <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                                <Smartphone size={32} />
+                                <PixIcon size={32} />
                             </div>
-                            <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-2">Pix</h3>
+                            <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+                                Pix <PixIcon size={24} className="text-primary" />
+                            </h3>
                             <div className="flex items-baseline gap-1 mb-6">
                                 <span className="text-5xl font-black text-slate-900 dark:text-white tracking-tighter">0,99</span>
                                 <span className="text-xl font-bold text-slate-500">%</span>
@@ -183,69 +186,69 @@ const Taxas = () => {
 
             {/* D+1 Section */}
             <section className="py-24 px-4 bg-slate-900 text-white relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
 
                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
                     <div>
-                        <div className="inline-block py-2 px-4 rounded-full bg-white/10 text-primary font-bold mb-6 backdrop-blur-md">
+                        <div className="inline-block py-2 px-4 rounded-full bg-blue-500/20 text-blue-400 font-bold mb-6 backdrop-blur-md border border-blue-500/30">
                             ANTECIPAÇÃO AUTOMÁTICA
                         </div>
                         <h2 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
-                            Receba tudo em <br /><span className="text-primary">um dia útil.</span>
+                            Receba tudo em <br /><span className="text-blue-400">um dia útil.</span>
                         </h2>
                         <p className="text-xl text-slate-300 mb-8 leading-relaxed">
                             Esqueça o fluxo de caixa travado. Na Bloopi, você tem a opção de receber suas vendas no crédito à vista ou parcelado já no dia seguinte.
                         </p>
                         <ul className="space-y-4 mb-10">
                             <li className="flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
+                                <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400">
                                     <TrendingUp size={24} />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-lg">Fluxo de Caixa Turbinado</h4>
+                                    <h4 className="font-bold text-lg text-white">Fluxo de Caixa Turbinado</h4>
                                     <p className="text-slate-400 text-sm">Dinheiro na mão para reinvestir.</p>
                                 </div>
                             </li>
                             <li className="flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
+                                <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400">
                                     <ShieldCheck size={24} />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-lg">Sem burocracia</h4>
+                                    <h4 className="font-bold text-lg text-white">Sem burocracia</h4>
                                     <p className="text-slate-400 text-sm">Aprovação automática baseada em volume.</p>
                                 </div>
                             </li>
                         </ul>
-                        <button className="px-8 py-4 bg-primary text-white rounded-xl font-bold hover:bg-primary-dark transition-all transform hover:scale-105 shadow-lg shadow-primary/25">
+                        <button className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-bold transition-all transform hover:scale-105 shadow-lg shadow-blue-500/25">
                             Quero receber em D+1
                         </button>
                     </div>
                     <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-blue-500/30 rounded-3xl blur-2xl"></div>
-                        <div className="bg-slate-800/50 backdrop-blur-xl border border-white/10 p-8 rounded-3xl relative">
+                        <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 rounded-3xl blur-2xl"></div>
+                        <div className="bg-slate-800/80 backdrop-blur-xl border border-white/10 p-8 rounded-3xl relative">
                             {/* Abstract Graphic representing speed/money */}
                             <div className="flex flex-col gap-4">
-                                <div className="flex justify-between items-center bg-slate-700/50 p-4 rounded-xl">
+                                <div className="flex justify-between items-center bg-slate-700/50 p-4 rounded-xl border border-white/5">
                                     <div className="flex items-center gap-3">
                                         <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400">
                                             <DollarSign size={20} />
                                         </div>
                                         <div>
-                                            <div className="font-bold">Venda Aprovada</div>
+                                            <div className="font-bold text-white">Venda Aprovada</div>
                                             <div className="text-xs text-slate-400">Hoje, 14:30</div>
                                         </div>
                                     </div>
                                     <div className="font-bold text-green-400">+ R$ 1.250,00</div>
                                 </div>
                                 <div className="ml-8 border-l-2 border-dashed border-slate-600 h-8"></div>
-                                <div className="flex justify-between items-center bg-primary/20 border border-primary/50 p-4 rounded-xl">
+                                <div className="flex justify-between items-center bg-blue-500/20 border border-blue-500/30 p-4 rounded-xl">
                                     <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+                                        <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white">
                                             <Zap size={20} />
                                         </div>
                                         <div>
                                             <div className="font-bold text-white">Disponível para Saque</div>
-                                            <div className="text-xs text-primary-200">Amanhã, 09:00</div>
+                                            <div className="text-xs text-blue-200">Amanhã, 09:00</div>
                                         </div>
                                     </div>
                                     <div className="font-bold text-white">R$ 1.210,00</div>
