@@ -100,6 +100,14 @@ const Footer = () => {
                         <h4 className="font-bold text-slate-900 dark:text-white mb-6">Contato</h4>
                         <ul className="space-y-4 text-sm text-slate-500 dark:text-slate-400">
                             <li>
+                                <span className="block font-bold text-slate-900 dark:text-white">WhatsApp</span>
+                                <a href="https://wa.me/553191705758" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">(31) 9170-5758</a>
+                            </li>
+                            <li>
+                                <span className="block font-bold text-slate-900 dark:text-white">Email Geral</span>
+                                <a href="mailto:contato@bloopi.com.br" className="hover:text-primary transition-colors">contato@bloopi.com.br</a>
+                            </li>
+                            <li>
                                 <span className="block font-bold text-slate-900 dark:text-white">Proposta e Atendimento</span>
                                 <a href="mailto:comercial@bloopi.com.br" className="hover:text-primary transition-colors">comercial@bloopi.com.br</a>
                             </li>

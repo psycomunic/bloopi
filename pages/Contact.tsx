@@ -40,6 +40,31 @@ const Contact = () => {
                             Nossa equipe esta aqui para o que precisar quando tiver dúvidas em como usar a nossa plataforma ou em qualquer outra questão técnica.
                         </p>
 
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-700">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg text-green-600 dark:text-green-400">
+                                        <Phone size={20} />
+                                    </div>
+                                    <span className="font-bold text-slate-900 dark:text-white">WhatsApp</span>
+                                </div>
+                                <a href="https://wa.me/553191705758" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+                                    (31) 9170-5758
+                                </a>
+                            </div>
+                            <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-700">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-blue-600 dark:text-blue-400">
+                                        <Mail size={20} />
+                                    </div>
+                                    <span className="font-bold text-slate-900 dark:text-white">E-mail</span>
+                                </div>
+                                <a href="mailto:contato@bloopi.com.br" className="text-slate-600 dark:text-slate-400 hover:text-primary transition-colors">
+                                    contato@bloopi.com.br
+                                </a>
+                            </div>
+                        </div>
+
                         <form className="space-y-6">
                             <div>
                                 <label className="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Nome completo</label>
