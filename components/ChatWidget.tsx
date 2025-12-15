@@ -10,9 +10,13 @@ const ChatWidget = () => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (message.trim()) {
-            // Here you would handle sending the message
-            console.log('Sending message:', message);
+            const phoneNumber = '553191705758';
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            window.open(whatsappUrl, '_blank');
             setMessage('');
+            setIsOpen(false);
         }
     };
 
