@@ -10,7 +10,7 @@ const ChatWidget = () => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (message.trim()) {
-            const phoneNumber = '553191705758';
+            const phoneNumber = '5531971905758';
             const encodedMessage = encodeURIComponent(message);
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 

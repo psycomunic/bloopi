@@ -101,7 +101,7 @@ const Footer = () => {
                         <ul className="space-y-4 text-sm text-slate-500 dark:text-slate-400">
                             <li>
                                 <span className="block font-bold text-slate-900 dark:text-white">WhatsApp</span>
-                                <a href="https://wa.me/553191705758" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">(31) 9170-5758</a>
+                                <a href="https://wa.me/5531971905758" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">(31) 9 7190-5758</a>
                             </li>
                             <li>
                                 <span className="block font-bold text-slate-900 dark:text-white">Email Geral</span>
@@ -125,7 +125,7 @@ const Footer = () => {
 
                 <div className="pt-8 border-t border-slate-200 dark:border-slate-700 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-xs text-slate-400">
-                        Bloopi © 2025 | Todos os Direitos Reservados | Bloopi Tecnologia - CNPJ: 00.000.000/0001-00
+                        Bloopi © 2025 | Todos os Direitos Reservados | Bloopi Tecnologia - CNPJ: 13.021.496/0001-21
                     </p>
                     <button
                         onClick={scrollToTop}
