@@ -1332,9 +1332,7 @@ const Home = () => {
               </div>
 
               <div className="space-y-3">
-                <a href="mailto:suporte@bloopi.com.br" className="block p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/20 transition-all text-slate-300 hover:text-white text-sm font-medium">
-                  suporte@bloopi.com.br
-                </a>
+
                 <a href="mailto:comercial@bloopi.com.br" className="block p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/20 transition-all text-slate-300 hover:text-white text-sm font-medium">
                   comercial@bloopi.com.br
                 </a>

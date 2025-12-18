@@ -111,10 +111,7 @@ const Footer = () => {
                                 <span className="block font-bold text-slate-900 dark:text-white">Proposta e Atendimento</span>
                                 <a href="mailto:comercial@bloopi.com.br" className="hover:text-primary transition-colors">comercial@bloopi.com.br</a>
                             </li>
-                            <li>
-                                <span className="block font-bold text-slate-900 dark:text-white">Ajuda e Soluções</span>
-                                <a href="mailto:suporte@bloopi.com.br" className="hover:text-primary transition-colors">suporte@bloopi.com.br</a>
-                            </li>
+
                             <li>
                                 <span className="block font-bold text-slate-900 dark:text-white">Formulário de contato</span>
                                 <Link to="/contact" className="text-primary hover:underline">Entrar em contato</Link>
