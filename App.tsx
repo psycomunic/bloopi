@@ -74,7 +74,8 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate('/')}>
-            <img src="/logo.png" alt="Bloopi Logo" className="h-10 w-auto" />
+            <img src="/logo_dark_new.png" alt="Bloopi Logo" className="h-10 w-auto block dark:hidden" />
+            <img src="/logo_white_new.png" alt="Bloopi Logo" className="h-10 w-auto hidden dark:block" />
           </div>
 
           <nav className="hidden md:flex gap-8 items-center">

@@ -26,7 +26,8 @@ const Footer = () => {
                     <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10"></div>
 
                     <div className="flex-1 text-center md:text-left z-10">
-                        <img src="/logo.png" alt="Bloopi" className="h-8 mx-auto md:mx-0 mb-6" />
+                        <img src="/logo_dark_new.png" alt="Bloopi" className="h-8 mx-auto md:mx-0 mb-6 block dark:hidden" />
+                        <img src="/logo_white_new.png" alt="Bloopi" className="h-8 mx-auto md:mx-0 mb-6 hidden dark:block" />
                         <p className="text-slate-600 dark:text-slate-300 mb-6 font-medium">Acompanhe nossas redes:</p>
                         <div className="flex justify-center md:justify-start gap-4">
                             <a href="#" className="p-3 rounded-xl bg-white dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-primary hover:text-white shadow-sm hover:shadow-md transition-all">
