@@ -162,9 +162,9 @@ const Home = () => {
                   Criar conta grátis
                   <ArrowRight size={20} />
                 </a>
-                <button className="h-14 px-8 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-lg backdrop-blur-md border border-white/10 transition-all">
+                <Link to="/taxas" className="h-14 px-8 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-lg backdrop-blur-md border border-white/10 transition-all flex items-center justify-center">
                   Conhecer
-                </button>
+                </Link>
               </div>
 
 
@@ -992,12 +992,12 @@ const Home = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-700 font-bold py-4 px-10 rounded-full shadow-2xl hover:bg-blue-50 transition-all transform hover:-translate-y-1">
+              <a href="https://app.bloopicheckout.com.br/signup" target="_blank" rel="noopener noreferrer" className="bg-white text-blue-700 font-bold py-4 px-10 rounded-full shadow-2xl hover:bg-blue-50 transition-all transform hover:-translate-y-1 block sm:inline-block text-center">
                 Começar Agora Grátis
-              </button>
-              <button className="bg-transparent border-2 border-white/30 text-white font-bold py-4 px-8 rounded-full hover:bg-white/10 transition-all">
+              </a>
+              <Link to="/taxas" className="bg-transparent border-2 border-white/30 text-white font-bold py-4 px-8 rounded-full hover:bg-white/10 transition-all block sm:inline-block text-center flex items-center justify-center">
                 Ver tabela de taxas
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>

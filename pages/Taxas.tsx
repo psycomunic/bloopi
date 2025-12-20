@@ -98,9 +98,9 @@ const Taxas = () => {
                                     <span className="text-slate-700 dark:text-slate-300 font-bold">Baixa automática</span>
                                 </li>
                             </ul>
-                            <button className="w-full py-4 text-center rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold hover:opacity-90 transition-opacity">
+                            <a href="https://app.bloopicheckout.com.br/signup" target="_blank" rel="noopener noreferrer" className="block w-full py-4 text-center rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold hover:opacity-90 transition-opacity">
                                 Começar com Pix
-                            </button>
+                            </a>
                         </motion.div>
 
                         {/* Credit Card */}
@@ -137,9 +137,9 @@ const Taxas = () => {
                                     <span className="text-slate-700 dark:text-slate-300 font-bold">Retentativa Inteligente</span>
                                 </li>
                             </ul>
-                            <button className="w-full py-4 text-center rounded-xl border-2 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                            <a href="https://app.bloopicheckout.com.br/signup" target="_blank" rel="noopener noreferrer" className="block w-full py-4 text-center rounded-xl border-2 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
                                 Vender no Crédito
-                            </button>
+                            </a>
                         </motion.div>
 
                         {/* Boleto */}
@@ -176,9 +176,9 @@ const Taxas = () => {
                                     <span className="text-slate-700 dark:text-slate-300 font-bold">Sem taxa de emissão</span>
                                 </li>
                             </ul>
-                            <button className="w-full py-4 text-center rounded-xl border-2 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                            <a href="https://app.bloopicheckout.com.br/signup" target="_blank" rel="noopener noreferrer" className="block w-full py-4 text-center rounded-xl border-2 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
                                 Configurar Boletos
-                            </button>
+                            </a>
                         </motion.div>
                     </div>
                 </div>
@@ -219,9 +219,9 @@ const Taxas = () => {
                                 </div>
                             </li>
                         </ul>
-                        <button className="px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-bold transition-all transform hover:scale-105 shadow-lg shadow-blue-500/25">
+                        <a href="https://app.bloopicheckout.com.br/signup" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-bold transition-all transform hover:scale-105 shadow-lg shadow-blue-500/25">
                             Quero receber em D+1
-                        </button>
+                        </a>
                     </div>
                     <div className="relative">
                         <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 rounded-3xl blur-2xl"></div>
@@ -301,9 +301,9 @@ const Taxas = () => {
                         <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
                             Crie sua conta gratuita em menos de 2 minutos e comece a vender com a tecnologia de pagamentos mais avançada do Brasil.
                         </p>
-                        <button className="px-10 py-5 bg-white text-primary text-xl font-black rounded-2xl hover:bg-slate-100 transition-all transform hover:scale-105 shadow-xl">
+                        <a href="https://app.bloopicheckout.com.br/signup" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-5 bg-white text-primary text-xl font-black rounded-2xl hover:bg-slate-100 transition-all transform hover:scale-105 shadow-xl">
                             CRIAR CONTA GRÁTIS
-                        </button>
+                        </a>
                         <p className="mt-6 text-sm text-blue-200 opacity-80">Sem mensalidade. Sem fidelidade. Cancele quando quiser.</p>
                     </div>
                 </div>
