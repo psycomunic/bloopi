@@ -91,12 +91,12 @@ const Header = () => {
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
             <div className="hidden sm:flex gap-3">
-              <button className="h-9 px-4 rounded-lg text-sm font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+              <a href="https://app.bloopicheckout.com.br/" target="_blank" rel="noopener noreferrer" className="h-9 px-4 rounded-lg text-sm font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center">
                 Login
-              </button>
-              <button className="h-9 px-4 rounded-lg bg-primary text-white text-sm font-bold shadow-lg shadow-blue-500/20 hover:bg-blue-600 transition-all hover:scale-105">
+              </a>
+              <a href="https://app.bloopicheckout.com.br/signup" target="_blank" rel="noopener noreferrer" className="h-9 px-4 rounded-lg bg-primary text-white text-sm font-bold shadow-lg shadow-blue-500/20 hover:bg-blue-600 transition-all hover:scale-105 flex items-center">
                 Criar Conta
-              </button>
+              </a>
             </div>
             <button onClick={toggleMenu} className="md:hidden p-2 text-slate-700 dark:text-white">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -119,12 +119,12 @@ const Header = () => {
             </Link>
           ))}
           <div className="flex flex-col gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
-            <button className="w-full h-10 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white font-bold">
+            <a href="https://app.bloopicheckout.com.br/" target="_blank" rel="noopener noreferrer" className="w-full h-10 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white font-bold flex items-center justify-center">
               Login
-            </button>
-            <button className="w-full h-10 rounded-lg bg-primary text-white font-bold">
+            </a>
+            <a href="https://app.bloopicheckout.com.br/signup" target="_blank" rel="noopener noreferrer" className="w-full h-10 rounded-lg bg-primary text-white font-bold flex items-center justify-center">
               Criar Conta
-            </button>
+            </a>
           </div>
         </div>
       )}

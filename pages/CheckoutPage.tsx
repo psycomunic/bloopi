@@ -44,9 +44,9 @@ const CheckoutPage = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-                            <button className="h-16 px-10 rounded-full bg-green-600 text-white font-bold text-lg shadow-xl shadow-green-600/20 hover:bg-green-700 hover:scale-105 transition-all flex items-center gap-2">
+                            <a href="https://app.bloopicheckout.com.br/signup" target="_blank" rel="noopener noreferrer" className="h-16 px-10 rounded-full bg-green-600 text-white font-bold text-lg shadow-xl shadow-green-600/20 hover:bg-green-700 hover:scale-105 transition-all flex items-center gap-2">
                                 Ativar Checkout 3.1 <ArrowRight size={20} />
-                            </button>
+                            </a>
                             <button className="h-16 px-10 rounded-full bg-white dark:bg-slate-800 text-slate-900 dark:text-white font-bold text-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
                                 Ver demonstração
                             </button>
@@ -263,9 +263,9 @@ const CheckoutPage = () => {
                         <p className="text-xl text-green-100 mb-10 max-w-2xl mx-auto">
                             Não deixe dinheiro na mesa por causa de um checkout lento. Migre hoje para o padrão ouro do mercado.
                         </p>
-                        <button className="bg-white text-green-700 font-bold py-5 px-12 rounded-full text-xl shadow-xl hover:bg-green-50 transition-all transform hover:-translate-y-1">
+                        <a href="https://app.bloopicheckout.com.br/signup" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-green-700 font-bold py-5 px-12 rounded-full text-xl shadow-xl hover:bg-green-50 transition-all transform hover:-translate-y-1">
                             Criar Conta Grátis
-                        </button>
+                        </a>
                         <p className="mt-6 text-sm text-green-200 font-medium">Sem cartão de crédito • Setup em 2 minutos</p>
                     </div>
                 </div>

@@ -158,10 +158,10 @@ const Home = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button className="h-14 px-8 rounded-xl bg-green-500 hover:bg-green-400 text-slate-900 font-bold text-lg shadow-lg shadow-green-500/20 hover:scale-105 transition-all flex items-center justify-center gap-2">
+                <a href="https://app.bloopicheckout.com.br/signup" target="_blank" rel="noopener noreferrer" className="h-14 px-8 rounded-xl bg-green-500 hover:bg-green-400 text-slate-900 font-bold text-lg shadow-lg shadow-green-500/20 hover:scale-105 transition-all flex items-center justify-center gap-2">
                   Criar conta grátis
                   <ArrowRight size={20} />
-                </button>
+                </a>
                 <button className="h-14 px-8 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-lg backdrop-blur-md border border-white/10 transition-all">
                   Conhecer
                 </button>
@@ -1331,12 +1331,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="space-y-3">
 
-                <a href="mailto:comercial@bloopi.com.br" className="block p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/20 transition-all text-slate-300 hover:text-white text-sm font-medium">
-                  comercial@bloopi.com.br
-                </a>
-              </div>
             </div>
           </div>
 
