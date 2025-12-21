@@ -106,7 +106,7 @@ const Footer = () => {
                                 <a href="https://wa.me/5531971905758" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">(31) 9 7190-5758</a>
                             </li>
                             <li>
-                                <span className="block font-bold text-slate-900 dark:text-white">Email Geral</span>
+                                <span className="block font-bold text-slate-900 dark:text-white">Email</span>
                                 <a href="mailto:contato@bloopi.com.br" className="hover:text-primary transition-colors">contato@bloopi.com.br</a>
                             </li>
 
