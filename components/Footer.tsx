@@ -69,7 +69,8 @@ const Footer = () => {
                             <li><Link to="/taxas" className="hover:text-primary transition-colors">Taxas</Link></li>
                             <li><Link to="/about" className="hover:text-primary transition-colors">Somos Bloopi</Link></li>
                             <li><Link to="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
-                            <li><Link to="/privacy" className="hover:text-primary transition-colors">Política de Privacidade e Termos de Uso</Link></li>
+                            <li><Link to="/privacy" className="hover:text-primary transition-colors">Política de Privacidade</Link></li>
+                            <li><Link to="/terms" className="hover:text-primary transition-colors">Termos de Uso</Link></li>
                         </ul>
                     </div>
 
